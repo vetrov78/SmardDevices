@@ -4,16 +4,12 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 34px;
-  color: $main-black;
 }
 
 .page__body {
   min-height: 100%;
   min-width: $min-width;
   margin: auto;
-  background-color: $main-white;
-
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
-
