@@ -1,4 +1,90 @@
 .page-header {
-  height: 125px;
-  border: 1px solid;
+  height: 878px;
+  background-color: $header-bakcground;
+  color: $main-white;
+}
+
+.page-header__upper-block {
+  border: 1px solid white;
+  margin: 33px 12%;
+  height: 52px;
+}
+
+.page-header__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header__list-item {
+  &--logo {
+    display: grid;
+    grid-template-areas:  "logo title"
+                          "logo text";
+
+    & svg {
+      grid-area: logo;
+      padding-right: 16px;
+    }
+
+    & h2 {
+      grid-area: title;
+      margin: 0;
+      font-family: "RobotoCondensed", "Arial", sans-serif;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 29px;
+    }
+
+    & p {
+      grid-area: text;
+      margin: 0;
+      font-family: "Roboto", "Arial", sans-serif;
+      font-size: 12px;
+      line-height: 15px;
+      color: $logo-text;
+    }
+  }
+
+  &--contacts {
+    display: flex;
+  }
+}
+
+.page-header__logo {
+  display: block;
+  width: 52px;
+  height: 52px;
+}
+
+.page-header__contact-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.page-header__promo h1 {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 80px;
+  line-height: 94px;
+  text-transform: uppercase;
+  color: $main-white;
+}
+
+.page-header__promo p {
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.page-header__promo button {
+  padding: 17px 28px 14px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-style: none;
+  background-color: $main-blue;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
 }

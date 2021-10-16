@@ -8,14 +8,41 @@
   <title>Title</title>
 
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/ptm55f-webfont.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/robotocondensed-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/robotocondensed-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/ptm55f-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/robotocondensed-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/robotocondensed-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <h1>Header</h1>
+    <h1 class="visually-hidden">Шапка сайта</h1>
+    <div class="page-header__upper-block">
+      <ul class="page-header__list">
+        <li class="page-header__list-item page-header__list-item--logo">
+          <svg class="page-header__logo">
+            <use xlink:href="./img/sprite.svg#logo"></use>
+          </svg>
+          <h2>Smart Device</h2>
+          <p>умные технологии</p>
+        </li>
+        <li class="page-header__list-item page-header__list-item--contacts">
+          <ul class="page-header__contact-list">
+            <li class="page-header__contact-list-item">
+              Mail
+            </li>
+            <li class="page-header__contact-list-item">
+              Phone
+            </li>
+          </ul>
+          <button>Заказать звонок</button>
+        </li>
+      </ul>
+    </div>
+    <div class="page-header__promo">
+      <h1>Печатные платы</h1>
+      <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <button>Получить бесплатную консультацию</button>
+    </div>
   </header>
   <main class="page-main">
     <h1>Main block</h1>
