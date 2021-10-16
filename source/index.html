@@ -15,7 +15,50 @@
 
 <body class="page__body">
   <header class="page-header">
-    <h1>Header</h1>
+    <h1 class="visually-hidden">Шапка сайта</h1>
+    <div class="page-header__upper-block">
+      <ul class="page-header__list">
+        <li class="page-header__list-item page-header__list-item--logo">
+          <svg class="page-header__logo">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+          <h2>Smart Device</h2>
+          <p>умные технологии</p>
+        </li>
+        <li class="page-header__list-item page-header__list-item--contacts">
+          <ul class="page-header__contact-list">
+            <li class="page-header__contact-list-item">
+              <a href="mailto:info@sd.ru">
+                <svg class="page-header__list-item-logo page-header__list-item-logo--mail">
+                  <use xlink:href="./img/sprite.svg#mail"></use>
+                </svg>
+                <span>info@sd.ru</span>
+              </a>
+            </li>
+            <li class="page-header__contact-list-item">
+              <a href="tel:+7(495)0005252">
+                <svg class="page-header__list-item-logo page-header__list-item-logo--phone">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <button>Заказать звонок</button>
+      </ul>
+    </div>
+    <div class="page-header__promo">
+      <h2>Печатные платы</h2>
+      <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <button>Получить бесплатную консультацию</button>
+    </div>
+    <svg class="page-header__polygons">
+      <use xlink:href="img/sprite.svg#polygons"></use>
+    </svg>
+
+    <img class="page-header__image" width="705" height="515" src="img/motherboards.png" alt="Несколько материнских плат">
+
   </header>
   <main class="page-main">
     <h1>Main block</h1>
