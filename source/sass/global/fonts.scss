@@ -1,9 +1,9 @@
 @font-face {
   font-family: "PTMono";
-  font-style: normal;
+  src: url("../fonts/ptmono-regular-webfont.woff2") format("woff2"), url("../fonts/ptmono-regular-webfont.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/ptm55f-webfont.woff2") format("woff2"), url("../fonts/ptm55f-webfont.woff") format("woff");
 }
 
 @font-face {

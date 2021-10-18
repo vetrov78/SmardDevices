@@ -1,12 +1,13 @@
 .page-header {
   position: relative;
+  overflow: hidden;
   min-height: 878px;
-  background-color: $header-bakcground;
-  background-image: url("../img/header_background.png");
+  background: $header-background url("../img/header_background.png");
   color: $main-white;
 }
 
 .page-header__upper-block {
+  z-index: 1;
   border: 1px solid white;
   margin: 33px 12%;
   height: 52px;
@@ -19,6 +20,8 @@
   padding: 0;
 
   & button {
+    flex-shrink: 0;
+    cursor: pointer;
     background-color: transparent;
     border: 1px solid $main-white;
     border-radius: 5px;
@@ -176,7 +179,10 @@
 
 .page-header__polygons {
   position: absolute;
+  z-index: 0;
   top: -69px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 1920px;
   height: 881px;
 }

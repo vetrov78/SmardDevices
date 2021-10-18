@@ -1,0 +1,110 @@
+.call-form__container {
+  position: absolute;
+  z-index: 1100;
+  top: 136px;
+  left: 40%;
+  width: 490px;
+  padding: 30px 40px 36px;
+  box-sizing: border-box;
+  background-color: $main-blue;
+}
+
+.call-form__close-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+}
+
+.call-form__container h1 {
+  margin: 0;
+  color: $main-white;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.call-form__container p {
+  color: $main-white;
+  line-height: 22px;
+}
+
+.call-form__container input {
+  margin-top: 30px;
+  width: 412px;
+  height: 52px;
+  padding: 14px 24px;
+  box-sizing: border-box;
+  background-color: $form-input-background;
+  border: none;
+  color: $main-white;
+
+  &::placeholder {
+    color: $main-white;
+  }
+}
+
+.call-form__container button {
+  cursor: pointer;
+  margin-top: 30px;
+  width: 412px;
+  padding: 14px 30px 8px;
+  height: 47px;
+  background-color: transparent;
+  border-style: none;
+  border-radius: 5px;
+  border: 1px solid $main-white;
+  color: $main-white;
+  text-transform: uppercase;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.call-form__policy-container {
+  margin-top: 34px;
+
+  & label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 48px;
+    color: $main-white;
+    font-size: 14px;
+    line-height: 16px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border: 1px solid $main-white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 5px;
+      width: 7px;
+      height: 5px;
+      border-left: 1px solid $main-white;
+      border-bottom: 1px solid $main-white;
+      transform: rotate(-45deg);
+    }
+  }
+
+  & input {
+    position: absolute;
+    left: -9999px;
+  };
+
+  & input:not(:checked) + label::after {
+    opacity: 0;
+  }
+}

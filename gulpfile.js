@@ -138,7 +138,7 @@ const build = gulp
     copy,
     gulp.parallel(
       images,
-      createWebp,
+      // createWebp,
       styles,
       sprite,
       jsMin,
@@ -167,7 +167,7 @@ exports.critical = criticalTask;
 exports.default = gulp
 .series(
   build,
-  criticalTask,
+  // criticalTask,
   server,
   watcher
 );
