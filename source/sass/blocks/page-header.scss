@@ -193,6 +193,7 @@
 }
 
 .page-header__promo {
+  z-index: 1;
   position: absolute;
   top: 231px;
   left: 12%;
@@ -318,15 +319,21 @@
 }
 
 .page-header__image {
+  z-index: 0;
   position: absolute;
   top: 256px;
   left: 54%;
 
   @media(max-width:$tablet-width){
-    width: 465px;
-    height: 340px;
     top: 134px;
     left: 66%;
+  }
+
+  @media(max-width:$tablet-width){
+    width: 301px;
+    height: 220px;
+    top: 92px;
+    left: 24px;
   }
 }
 

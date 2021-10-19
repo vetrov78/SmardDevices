@@ -54,9 +54,9 @@
       <button><span>Получить бесплатную консультацию</span></button>
     </div>
     <picture>
-      <source type="image/webp" media="(max-width: 767px)" srcset="./img/motherboards_tablet@1x.webp 1x, ./img/motherboards_tablet@2x.webp 2x">
+      <source type="image/webp" media="(max-width: 767px)" srcset="./img/motherboards_mobile@1x.webp 1x, ./img/motherboards_mobile@2x.webp 2x">
       <!-- 1x: 301x220; 2x: 602x440 -->
-      <source type="image/png" media="(max-width: 767px)" srcset="./img/motherboards_tablet@1x.png 1x, ./img/motherboards_tablet@2x.png 2x">
+      <source type="image/png" media="(max-width: 767px)" srcset="./img/motherboards_mobile@1x.png 1x, ./img/motherboards_mobile@2x.png 2x">
       <source type="image/webp" media="(max-width: 1023px)" srcset="./img/motherboards_tablet@1x.webp 1x, ./img/motherboards_tablet@2x.webp 2x">
       <!-- 1x: 465x340; 2x: 930x680 -->
       <source type="image/png" media="(max-width: 1023px)" srcset="./img/motherboards_tablet@1x.png 1x, ./img/motherboards_tablet@2x.png 2x">
@@ -75,7 +75,82 @@
   </main>
 
   <footer class="page-footer">
-    <h1>Footer</h1>
+    <h1 class="visually-hidden">Footer</h1>
+    <div class="page-footer__upper-block">
+      <div class="page-footer__logo-socials-wrapper">
+        <div class="page-footer__logo-block">
+          <svg class="page-footer__logo">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+          <h2>Service Device</h2>
+          <p>умные технологии</p>
+        </div>
+        <div class="page-footer__item page-footer__item--socials">
+          <ul class="page-footer__socials-list">
+            <li>
+              <a class="page-footer__socials-item" href="#" aria-label="Иконка соц.сетей Facebook">
+                <svg>
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="page-footer__socials-item" href="#" aria-label="Иконка соц.сетей Одноклассники">
+                <svg>
+                  <use xlink:href="img/sprite.svg#odnoklassniki"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="page-footer__socials-item" href="#" aria-label="Иконка соц.сетей Вконтакте">
+                <svg>
+                  <use xlink:href="img/sprite.svg#vkontakte"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-footer__menu-address-wrapper">
+        <div class="page-footer__menu-block">
+          <h2>Разделы сайта</h2>
+          <ul class="page-footer__menu-list">
+            <li class="page-footer__menu-item">О компании</li>
+            <li class="page-footer__menu-item">Продукты</li>
+            <li class="page-footer__menu-item">Производство печатных плат</li>
+            <li class="page-footer__menu-item">Монтаж печатных плат</li>
+            <li class="page-footer__menu-item">Комплектующие</li>
+            <li class="page-footer__menu-item">Доставка</li>
+            <li class="page-footer__menu-item">Контакты</li>
+          </ul>
+        </div>
+        <div class="page-footer__address-block">
+          <h2>Наш офис</h2>
+          <ul class="page-footer__address-list">
+            <li class="page-footer__menu-item">г. Мытищи, Олимпийский проспект, д.10</li>
+            <li class="page-footer__menu-item">+7 (495) 589-40-50</li>
+            <li class="page-footer__menu-item">+7 (925) 003-87-67</li>
+            <li class="page-footer__menu-item">+7 (926) 926-080-79</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <ul class="page-footer__bottom-block">
+      <li class="page-footer__bottom-item page-footer__bottom-item--rights">
+        Все права защищены
+      </li>
+      <li class="page-footer__bottom-item page-footer__bottom-item--trademark">
+        1999-2018 SD Service Devices
+      </li>
+      <li class="page-footer__bottom-item page-footer__bottom-item--confidentials">
+        Условия конфиденциальности
+      </li>
+      <li class="page-footer__bottom-item page-footer__bottom-item--developed">
+        Developed by wow studio
+      </li>
+    </ul>
+
   </footer>
 
   <template id="call-form">
