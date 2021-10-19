@@ -16,9 +16,6 @@
 <body class="page__body">
   <header class="page-header">
     <h1 class="visually-hidden">Шапка сайта</h1>
-    <svg class="page-header__polygons">
-      <use xlink:href="img/sprite.svg#polygons"></use>
-    </svg>
     <div class="page-header__upper-block">
       <ul class="page-header__list">
         <li class="page-header__list-item page-header__list-item--logo">
@@ -48,15 +45,29 @@
             </li>
           </ul>
         </li>
-        <button id="call-request-button">Заказать звонок</button>
       </ul>
+      <button id="call-request-button">Заказать звонок</button>
     </div>
     <div class="page-header__promo">
       <h2>Печатные платы</h2>
       <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button>Получить бесплатную консультацию</button>
+      <button><span>Получить бесплатную консультацию</span></button>
     </div>
-    <img class="page-header__image" width="705" height="515" src="img/motherboards.png" alt="Несколько материнских плат">
+    <picture>
+      <source type="image/webp" media="(max-width: 767px)" srcset="./img/motherboards_tablet@1x.webp 1x, ./img/motherboards_tablet@2x.webp 2x">
+      <!-- 1x: 301x220; 2x: 602x440 -->
+      <source type="image/png" media="(max-width: 767px)" srcset="./img/motherboards_tablet@1x.png 1x, ./img/motherboards_tablet@2x.png 2x">
+      <source type="image/webp" media="(max-width: 1023px)" srcset="./img/motherboards_tablet@1x.webp 1x, ./img/motherboards_tablet@2x.webp 2x">
+      <!-- 1x: 465x340; 2x: 930x680 -->
+      <source type="image/png" media="(max-width: 1023px)" srcset="./img/motherboards_tablet@1x.png 1x, ./img/motherboards_tablet@2x.png 2x">
+      <source type="image/webp" srcset="./img/motherboards@1x.webp 1x, ./img/motherboards@2x.webp 2x">
+      <!-- 1x: 705x515; 2x: 1410x1030 -->
+      <img class="page-header__image" src="img/motherboards@1x.png" srcset="img/motherboards@2x.png" width="705" height="515" alt="Несколько материнских плат">
+    </picture>
+
+    <!-- <svg class="page-header__polygons-svg">
+      <use xlink:href="img/sprite.svg#polygons"></use>
+    </svg> -->
   </header>
 
   <main class="page-main">
@@ -94,5 +105,6 @@
     </div>
   </template>
 </body>
+
 <script src="js/script.js"></script>
 </html>

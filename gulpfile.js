@@ -138,7 +138,7 @@ const build = gulp
     copy,
     gulp.parallel(
       images,
-      // createWebp,
+      createWebp,
       styles,
       sprite,
       jsMin,

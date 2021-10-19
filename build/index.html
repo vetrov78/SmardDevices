@@ -1,1 +1,110 @@
-<!DOCTYPE html><html lang="ru" class="page"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Title</title><link rel="stylesheet" href="css/style.min.css"><link rel="preload" href="fonts/ptmono-regular-webfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/robotocondensed-regular-webfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/robotocondensed-bold-webfont.woff2" as="font" type="font/woff2" crossorigin></head><body class="page__body"><header class="page-header"><h1 class="visually-hidden">Шапка сайта</h1><svg class="page-header__polygons"><use xlink:href="img/sprite.svg#polygons"></use></svg><div class="page-header__upper-block"><ul class="page-header__list"><li class="page-header__list-item page-header__list-item--logo"><svg class="page-header__logo"><use xlink:href="img/sprite.svg#logo"></use></svg><h2>Smart Device</h2><p>умные технологии</p></li><li class="page-header__list-item page-header__list-item--contacts"><ul class="page-header__contact-list"><li class="page-header__contact-list-item"><a href="mailto:info@sd.ru"><svg class="page-header__list-item-logo page-header__list-item-logo--mail"><use xlink:href="./img/sprite.svg#mail"></use></svg> <span>info@sd.ru</span></a></li><li class="page-header__contact-list-item"><a href="tel:+7(495)0005252"><svg class="page-header__list-item-logo page-header__list-item-logo--phone"><use xlink:href="img/sprite.svg#phone"></use></svg> <span>+7 (495) 000 52 52</span></a></li></ul></li><button id="call-request-button">Заказать звонок</button></ul></div><div class="page-header__promo"><h2>Печатные платы</h2><p>производство и монтаж, поставка комплектующих, блоков и модулей</p><button>Получить бесплатную консультацию</button></div><img class="page-header__image" width="705" height="515" src="img/motherboards.png" alt="Несколько материнских плат"></header><main class="page-main"><h1>Main block</h1></main><footer class="page-footer"><h1>Footer</h1></footer><template id="call-form"><div class="call-form__container"><form method="POST" action="https://echo.htmlacademy.ru"><h1>Закажите звонок</h1><svg class="call-form__close-icon"><use xlink:href="/img/sprite.svg#close-icon"></use></svg><p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p><label for="name"><input type="text" name="name" id="name" placeholder="Имя" required></label> <label for="phone"><input type="tel" name="phone" id="phone" placeholder="Телефон" required></label> <label for="question"><input type="text" name="question" id="question" placeholder="Ваш вопрос"></label> <button>Отправить</button><div class="call-form__policy-container"><input type="checkbox" name="policy" id="policy" aria-label="согласие на обработку данных" required> <label for="policy">Я согласен на обработку персональных данных</label></div></form></div></template></body><script src="js/script.js"></script></html>
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Title</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptmono-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/robotocondensed-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/robotocondensed-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <h1 class="visually-hidden">Шапка сайта</h1>
+    <div class="page-header__upper-block">
+      <ul class="page-header__list">
+        <li class="page-header__list-item page-header__list-item--logo">
+          <svg class="page-header__logo">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+          <h2>Smart Device</h2>
+          <p>умные технологии</p>
+        </li>
+        <li class="page-header__list-item page-header__list-item--contacts">
+          <ul class="page-header__contact-list">
+            <li class="page-header__contact-list-item">
+              <a href="mailto:info@sd.ru">
+                <svg class="page-header__list-item-logo page-header__list-item-logo--mail">
+                  <use xlink:href="./img/sprite.svg#mail"></use>
+                </svg>
+                <span>info@sd.ru</span>
+              </a>
+            </li>
+            <li class="page-header__contact-list-item">
+              <a href="tel:+7(495)0005252">
+                <svg class="page-header__list-item-logo page-header__list-item-logo--phone">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <button id="call-request-button">Заказать звонок</button>
+    </div>
+    <div class="page-header__promo">
+      <h2>Печатные платы</h2>
+      <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <button><span>Получить бесплатную консультацию</span></button>
+    </div>
+    <picture>
+      <source type="image/webp" media="(max-width: 767px)" srcset="./img/motherboards_tablet@1x.webp 1x, ./img/motherboards_tablet@2x.webp 2x">
+      <!-- 1x: 301x220; 2x: 602x440 -->
+      <source type="image/png" media="(max-width: 767px)" srcset="./img/motherboards_tablet@1x.png 1x, ./img/motherboards_tablet@2x.png 2x">
+      <source type="image/webp" media="(max-width: 1023px)" srcset="./img/motherboards_tablet@1x.webp 1x, ./img/motherboards_tablet@2x.webp 2x">
+      <!-- 1x: 465x340; 2x: 930x680 -->
+      <source type="image/png" media="(max-width: 1023px)" srcset="./img/motherboards_tablet@1x.png 1x, ./img/motherboards_tablet@2x.png 2x">
+      <source type="image/webp" srcset="./img/motherboards@1x.webp 1x, ./img/motherboards@2x.webp 2x">
+      <!-- 1x: 705x515; 2x: 1410x1030 -->
+      <img class="page-header__image" src="img/motherboards@1x.png" srcset="img/motherboards@2x.png" width="705" height="515" alt="Несколько материнских плат">
+    </picture>
+
+    <!-- <svg class="page-header__polygons-svg">
+      <use xlink:href="img/sprite.svg#polygons"></use>
+    </svg> -->
+  </header>
+
+  <main class="page-main">
+    <h1>Main block</h1>
+  </main>
+
+  <footer class="page-footer">
+    <h1>Footer</h1>
+  </footer>
+
+  <template id="call-form">
+    <div class="call-form__container">
+      <form method="POST" action="https://echo.htmlacademy.ru">
+        <h1>Закажите звонок</h1>
+        <svg class="call-form__close-icon">
+          <use xlink:href="/img/sprite.svg#close-icon"></use>
+        </svg>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <label for="name">
+          <input type="text" name="name" id="name" placeholder="Имя" required>
+        </label>
+        <label for="phone">
+          <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+        </label>
+        <label for="question">
+          <input type="text" name="question" id="question" placeholder="Ваш вопрос">
+        </label>
+        <button>Отправить</button>
+        <div class="call-form__policy-container">
+          <input type="checkbox" name="policy" id="policy" aria-label="согласие на обработку данных" required>
+          <label for="policy">Я согласен на обработку  персональных данных</label>
+        </div>
+
+      </form>
+    </div>
+  </template>
+</body>
+
+<script src="js/script.js"></script>
+</html>
