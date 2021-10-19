@@ -1,30 +1,51 @@
 @font-face {
   font-family: "PTMono";
+<<<<<<< HEAD
   src: url("../fonts/ptmono-regular-webfont.woff2") format("woff2"), url("../fonts/ptmono-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+=======
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/ptm55f-webfont.woff2") format("woff2"), url("../fonts/ptm55f-webfont.woff") format("woff");
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
 }
 @font-face {
   font-family: "RobotoCondensed";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+<<<<<<< HEAD
   src: url("../fonts/robotocondensed-regular-webfont.woff2") format("woff2"), url("../fonts/robotocondensed-regular-webfont.woff") format("woff");
+=======
+  src: url("../fonts/robotocondensed-regular-webfont.woff2") format("woff2"), url("/build/fonts/robotocondensed-regular-webfont.woff") format("woff");
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
 }
 @font-face {
   font-family: "RobotoCondensed";
   font-style: normal;
+<<<<<<< HEAD
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/robotocondensed-bold-webfont.woff2") format("woff2"), url("../fonts/robotocondensed-bold-webfont.woff") format("woff");
+=======
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/robotocondensed-bold-webfont.woff2") format("woff2"), url("/build/fonts/robotocondensed-bold-webfont.woff") format("woff");
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
+<<<<<<< HEAD
   src: url("../fonts/roboto-medium-webfont.woff2") format("woff2"), url("../fonts/roboto-medium-webfont.woff") format("woff");
+=======
+  src: url("../fonts/roboto-medium-webfont.woff2") format("woff2"), url("/build/fonts/roboto-medium-webfont.woff") format("woff");
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
 }
 body {
   margin: 0;
@@ -68,15 +89,23 @@ a {
 }
 
 .page-header {
+<<<<<<< HEAD
   position: relative;
   overflow: hidden;
   min-height: 878px;
   background: #1B2D37 url("../img/header_background.png");
+=======
+  height: 878px;
+  background-color: #1B2D37;
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
   color: #FFFFFF;
 }
 
 .page-header__upper-block {
+<<<<<<< HEAD
   z-index: 1;
+=======
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
   border: 1px solid white;
   margin: 33px 12%;
   height: 52px;
@@ -84,10 +113,15 @@ a {
 
 .page-header__list {
   display: flex;
+<<<<<<< HEAD
+=======
+  justify-content: space-between;
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
   list-style: none;
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
 .page-header__list button {
   flex-shrink: 0;
   cursor: pointer;
@@ -101,6 +135,8 @@ a {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+=======
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
 
 .page-header__list-item--logo {
   display: grid;
@@ -127,9 +163,13 @@ a {
   color: #788891;
 }
 .page-header__list-item--contacts {
+<<<<<<< HEAD
   flex-grow: 1;
   display: flex;
   justify-content: end;
+=======
+  display: flex;
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
 }
 
 .page-header__logo {
@@ -141,6 +181,7 @@ a {
 .page-header__contact-list {
   list-style: none;
   display: flex;
+<<<<<<< HEAD
   gap: 88px;
   align-items: center;
   padding: 0;
@@ -193,6 +234,13 @@ a {
   margin: 0;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
+=======
+  align-items: center;
+}
+
+.page-header__promo h1 {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
   font-size: 80px;
   line-height: 94px;
   text-transform: uppercase;
@@ -200,6 +248,7 @@ a {
 }
 
 .page-header__promo p {
+<<<<<<< HEAD
   position: relative;
   margin: 31px 0 0 98px;
   font-size: 22px;
@@ -217,6 +266,13 @@ a {
 
 .page-header__promo button {
   margin: 37px 0 37px 98px;
+=======
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.page-header__promo button {
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
   padding: 17px 28px 14px;
   box-sizing: border-box;
   border-radius: 5px;
@@ -224,6 +280,7 @@ a {
   background-color: #00B2FF;
   font-size: 16px;
   line-height: 19px;
+<<<<<<< HEAD
   color: #FFFFFF;
   text-transform: uppercase;
 }
@@ -353,4 +410,12 @@ a {
 }
 .call-form__policy-container input:not(:checked) + label::after {
   opacity: 0;
+=======
+  text-transform: uppercase;
+}
+
+.page-footer {
+  height: 125px;
+  border: 1px solid;
+>>>>>>> b2faa6e641380fcc6ade027a948743b9144fd6ef
 }
