@@ -22,3 +22,17 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.tablet-and-lower {
+  display: none;
+
+  @media(max-width:$tablet-width) {
+    display: inline;
+  }
+}
+
+.desktop-only {
+  @media(max-width:$tablet-width) {
+    display: none;
+  }
+}
