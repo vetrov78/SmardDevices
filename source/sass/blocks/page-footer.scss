@@ -339,8 +339,12 @@
 
 
 .page-footer__menu-toggle {
-  border: 1px solid red;
+  display: none;
   cursor: pointer;
+
+  @media(max-width:$mobile-width) {
+    display: block;
+  }
 
   & svg {
     fill: $icon-fill;
@@ -368,8 +372,12 @@
 }
 
 .page-footer__address-toggle {
-  border: 1px solid red;
+  display: none;
   cursor: pointer;
+
+  @media(max-width:$mobile-width) {
+    display: block;
+  }
 
   & svg {
     fill: $icon-fill;

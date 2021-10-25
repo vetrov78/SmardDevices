@@ -52,6 +52,104 @@ a {
   overflow: hidden;
 }
 
+.advantages {
+  max-width: 1220px;
+  margin: auto;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .advantages {
+    padding: 0 16px 0 14px;
+  }
+}
+
+.advantages__list {
+  list-style: none;
+  margin-top: 109px;
+  padding: 0;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media (max-width: 1023px) {
+  .advantages__list {
+    margin-top: 54px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    margin-top: 37px;
+  }
+}
+
+.advantages__item {
+  cursor: pointer;
+  min-height: 232px;
+  border: 1px solid #EBEBEB;
+  border-left: 3px solid #00B2FF;
+  padding: 40px 45px;
+  box-sizing: border-box;
+}
+.advantages__item svg {
+  width: 35px;
+  height: 35px;
+  fill: #00B2FF;
+}
+.advantages__item h3 {
+  margin: 23px 0 0;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00B2FF;
+}
+.advantages__item p {
+  margin: 15px 0 0;
+}
+.advantages__item:hover {
+  background-color: #00B2FF;
+  color: #FFFFFF;
+}
+.advantages__item:hover svg {
+  fill: #FFFFFF;
+}
+.advantages__item:hover h3 {
+  color: #FFFFFF;
+}
+@media (max-width: 1023px) {
+  .advantages__item {
+    padding: 24px 12px 24px 27px;
+  }
+  .advantages__item svg {
+    width: 35px;
+    height: 35px;
+  }
+  .advantages__item h3 {
+    margin-top: 10px;
+  }
+  .advantages__item p {
+    margin-top: 21px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item svg {
+    width: 35px;
+    height: 35px;
+  }
+  .advantages__item h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .advantages__item p {
+    margin-top: 21px;
+  }
+}
+
 .page {
   height: 100%;
   font-family: "PTMono", "Arial", sans-serif;
@@ -773,8 +871,13 @@ a {
 }
 
 .page-footer__menu-toggle {
-  border: 1px solid red;
+  display: none;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .page-footer__menu-toggle {
+    display: block;
+  }
 }
 .page-footer__menu-toggle svg {
   fill: #C4C4C4;
@@ -801,8 +904,13 @@ a {
 }
 
 .page-footer__address-toggle {
-  border: 1px solid red;
+  display: none;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .page-footer__address-toggle {
+    display: block;
+  }
 }
 .page-footer__address-toggle svg {
   fill: #C4C4C4;
