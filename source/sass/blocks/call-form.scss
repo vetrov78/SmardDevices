@@ -89,7 +89,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 0px;
+      top: 0;
       left: 5px;
       width: 7px;
       height: 5px;
@@ -102,7 +102,7 @@
   & input {
     position: absolute;
     left: -9999px;
-  };
+  }
 
   & input:not(:checked) + label::after {
     opacity: 0;

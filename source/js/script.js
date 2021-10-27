@@ -5,7 +5,7 @@ var callFormTemplate = document.querySelector('#call-form')
 
 var callRequestButton = document.querySelector('#call-request-button');
 var windowExistFlag = false;
-//модальное окно "Заказать звонок"
+// модальное окно "Заказать звонок"
 callRequestButton.addEventListener('click', function () {
   if (!windowExistFlag) {
     var callRequestWindow = callFormTemplate.cloneNode(true);
@@ -13,25 +13,27 @@ callRequestButton.addEventListener('click', function () {
     var closeIcon = document.querySelector('.call-form__close-icon');
     windowExistFlag = true;
   }
-  //закрытие окна
-  const removeModal = function(evt) {
+  // закрытие окна
+  var removeModal = function (evt) {
     evt.preventDefault();
     callRequestWindow.remove();
     document.removeEventListener('keydown', onEscRemoveModal);
     windowExistFlag = false;
-  }
-  const isEscEvent = function(evt) {
+  };
+  var isEscEvent = function (evt) {
     return (evt.key === 'Escape' || evt.key === 'Esc');
-  }
-  const onEscRemoveModal = function(evt) {
-    if (isEscEvent(evt)) removeModal(evt);
+  };
+  var onEscRemoveModal = function (evt) {
+    if (isEscEvent(evt)) {
+      removeModal(evt);
+    }
   };
   document.addEventListener('keydown', onEscRemoveModal);
   closeIcon.addEventListener('click', removeModal);
 
 });
 
-//Реализация аккордеона
+// Реализация аккордеона
 var maBlock = document.querySelector('.page-footer__menu-address-wrapper');
 maBlock.classList.remove('no-js');
 var menuBlock = document.querySelector('.page-footer__menu-block');
@@ -52,7 +54,7 @@ menuToggle.addEventListener('click', function () {
     menuBlock.classList.add('page-footer__menu-block--closed');
     menuBlock.classList.remove('page-footer__menu-block--opened');
   }
-})
+});
 
 var addressToggle = document.querySelector('.page-footer__address-toggle');
 addressToggle.addEventListener('click', function () {
@@ -67,4 +69,4 @@ addressToggle.addEventListener('click', function () {
     addressBlock.classList.add('page-footer__address-block--closed');
     addressBlock.classList.remove('page-footer__address-block--opened');
   }
-})
+});

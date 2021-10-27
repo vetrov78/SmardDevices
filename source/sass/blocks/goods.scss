@@ -10,11 +10,11 @@
   box-sizing: border-box;
   width: fit-content;
 
-  @media(max-width:$tablet-width) {
+  @media (max-width: $tablet-width) {
     width: 100%;
   }
 
-  @media(max-width:$mobile-width) {
+  @media (max-width: $mobile-width) {
     padding: 0 15px;
   }
 }
@@ -28,14 +28,14 @@
   line-height: 50px;
   color: $main-white;
 
-  @media(max-width:$tablet-width) {
+  @media (max-width: $tablet-width) {
     margin-top: 53px;
     padding-right: 100px;
     font-size: 32px;
     line-height: 45px;
   }
 
-  @media(max-width:$mobile-width) {
+  @media (max-width: $mobile-width) {
     margin-top: 53px;
     margin-left: 10px;
     font-size: 28px;
@@ -50,13 +50,13 @@
   padding: 0;
   display: flex;
 
-  @media(max-width:$tablet-width) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     width: 100%;
     margin-bottom: 78px;
   }
 
-  @media(max-width:$mobile-width) {
+  @media (max-width: $mobile-width) {
     margin-bottom: 64px;
   }
 }
@@ -68,7 +68,7 @@
     margin-right: 30px;
   }
 
-  @media(max-width:$tablet-width) {
+  @media (max-width: $tablet-width) {
     height: 256px;
 
     &:not(:last-child) {
@@ -119,9 +119,9 @@
     line-height: 30px;
     color: $main-white;
 
-    @media(max-width:$tablet-width) {
+    @media (max-width: $tablet-width) {
       top: 43px;
-    left: 43px;
+      left: 43px;
     }
   }
 
@@ -129,8 +129,7 @@
     display: block;
   }
 
-  @media(max-width:$tablet-width) {
-
+  @media (max-width: $tablet-width) {
     & img {
       object-fit: cover;
       max-width: 100%;
@@ -139,8 +138,7 @@
     }
   }
 
-  @media(max-width:$mobile-width) {
-
+  @media (max-width: $mobile-width) {
     & h3 {
       top: 23px;
       left: 35px;

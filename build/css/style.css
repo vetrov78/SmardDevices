@@ -95,7 +95,7 @@ a {
   height: 45px;
   margin: 35px 0 0;
   background-color: transparent;
-  border: 1px solid #00B2FF;
+  border: 1px solid #00b2ff;
   border-radius: 5px;
   text-transform: uppercase;
   font-family: "RobotoCondensed", "Arial", sans-serif;
@@ -103,7 +103,7 @@ a {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
-  color: #00B2FF;
+  color: #00b2ff;
 }
 @media (max-width: 1023px) {
   .about {
@@ -184,13 +184,13 @@ a {
 .advantages__item {
   cursor: pointer;
   min-height: 232px;
-  border: 1px solid #EBEBEB;
-  border-left: 3px solid #00B2FF;
+  border: 1px solid #ebebeb;
+  border-left: 3px solid #00b2ff;
   padding: 40px 43px;
   box-sizing: border-box;
 }
 .advantages__item svg {
-  fill: #00B2FF;
+  fill: #00b2ff;
 }
 .advantages__item h3 {
   margin: 18px 0 0;
@@ -198,20 +198,20 @@ a {
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
-  color: #00B2FF;
+  color: #00b2ff;
 }
 .advantages__item p {
   margin: 15px 0 0;
 }
 .advantages__item:hover {
-  background-color: #00B2FF;
-  color: #FFFFFF;
+  background-color: #00b2ff;
+  color: #ffffff;
 }
 .advantages__item:hover svg {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 .advantages__item:hover h3 {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 1023px) {
   .advantages__item {
@@ -259,7 +259,7 @@ a {
   width: 490px;
   padding: 30px 40px 36px;
   box-sizing: border-box;
-  background-color: #00B2FF;
+  background-color: #00b2ff;
 }
 
 .call-form__close-icon {
@@ -273,7 +273,7 @@ a {
 
 .call-form__container h1 {
   margin: 0;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 28px;
@@ -281,7 +281,7 @@ a {
 }
 
 .call-form__container p {
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 22px;
 }
 
@@ -293,10 +293,10 @@ a {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .call-form__container input::placeholder {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .call-form__container button {
@@ -308,8 +308,8 @@ a {
   background-color: transparent;
   border-style: none;
   border-radius: 5px;
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   text-transform: uppercase;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
@@ -324,7 +324,7 @@ a {
   position: relative;
   cursor: pointer;
   padding-left: 48px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 14px;
   line-height: 16px;
 }
@@ -335,17 +335,17 @@ a {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 .call-form__policy-container label::after {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 5px;
   width: 7px;
   height: 5px;
-  border-left: 1px solid #FFFFFF;
-  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   transform: rotate(-45deg);
 }
 .call-form__policy-container input {
@@ -358,14 +358,14 @@ a {
 
 .form {
   width: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 92px 0 110px;
   box-sizing: border-box;
-  background: #00B2FF left 175px top -60px no-repeat url("../img/form_polygons.svg");
+  background: #00b2ff left 175px top -60px no-repeat url("../img/form_polygons.svg");
 }
 @media (max-width: 1023px) {
   .form {
-    background: #00B2FF;
+    background: #00b2ff;
     padding-top: 80px;
   }
 }
@@ -376,18 +376,36 @@ a {
   align-items: center;
   padding: 0 5%;
 }
+.form__container h1 {
+  margin: 0;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+.form__container p {
+  margin: 7px 0 0;
+}
 .form__container form {
   margin-left: 7%;
   flex: 0 0 570px;
 }
 @media (max-width: 1023px) {
-  .form__container form {
-    flex: 1 0 590px;
-  }
-}
-@media (max-width: 1023px) {
   .form__container {
     justify-content: start;
+    padding: 0 11%;
+  }
+  .form__container h1 {
+    margin-left: -3px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .form__container p {
+    margin-top: 15px;
+  }
+  .form__container form {
+    margin-left: 8px;
+    flex: 1 0 590px;
   }
 }
 
@@ -401,29 +419,6 @@ a {
   }
 }
 
-.form__container h1 {
-  margin: 0;
-  font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
-}
-@media (max-width: 1023px) {
-  .form__container h1 {
-    font-size: 32px;
-    line-height: 45px;
-  }
-}
-
-.form__container p {
-  margin: 7px 0 0;
-}
-@media (max-width: 1023px) {
-  .form__container p {
-    margin-top: 15px;
-  }
-}
-
 .form__inputs-container {
   display: flex;
   flex-wrap: wrap;
@@ -431,8 +426,12 @@ a {
   margin-top: 15px;
 }
 .form__inputs-container label {
+  flex-basis: 270px;
   height: 50px;
   margin-top: 40px;
+}
+.form__inputs-container label:not(:first-child) {
+  margin-left: 30px;
 }
 .form__inputs-container input {
   width: 100%;
@@ -441,14 +440,14 @@ a {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .form__inputs-container input::placeholder {
   font-family: "PTMono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .form__inputs-container textarea {
   flex-basis: 100%;
@@ -458,19 +457,28 @@ a {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .form__inputs-container textarea::placeholder {
-  color: #FFFFFF;
+  font-family: "PTMono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
 }
-
-.form__name-label {
-  flex-basis: 270px;
-}
-
-.form__phone-label {
-  flex-basis: 269px;
-  margin-left: 31px;
+@media (max-width: 1023px) {
+  .form__inputs-container {
+    max-width: none;
+  }
+  .form__inputs-container label {
+    flex: 1 0 279px;
+  }
+  .form__inputs-container label:not(:first-child) {
+    margin-left: 30px;
+  }
+  .form__inputs-container textarea {
+    min-height: 159px;
+  }
 }
 
 .form__lower-block {
@@ -486,8 +494,8 @@ a {
   background-color: transparent;
   border-style: none;
   border-radius: 5px;
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   text-transform: uppercase;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
@@ -516,7 +524,7 @@ a {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 .form__policy-container label::after {
   content: "";
@@ -525,8 +533,8 @@ a {
   left: 5px;
   width: 7px;
   height: 5px;
-  border-left: 1px solid #FFFFFF;
-  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   transform: rotate(-45deg);
 }
 .form__policy-container input {
@@ -538,9 +546,9 @@ a {
 }
 
 .goods {
-  border: 1px solid #1B2D37;
+  border: 1px solid #1b2d37;
   width: 100%;
-  background-color: #1B2D37;
+  background-color: #1b2d37;
 }
 
 .goods__container {
@@ -567,7 +575,7 @@ a {
   font-weight: 400;
   font-size: 36px;
   line-height: 50px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 1023px) {
   .goods__title {
@@ -635,7 +643,7 @@ a {
   right: 0;
   width: 63px;
   height: 63px;
-  background-color: #00B2FF;
+  background-color: #00b2ff;
 }
 .goods__item-link::after {
   z-index: 1;
@@ -645,8 +653,8 @@ a {
   height: 5px;
   bottom: 27px;
   right: 27px;
-  border-right: 1px solid #FFFFFF;
-  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   transform: rotate(-45deg);
 }
 .goods__item-link h3 {
@@ -659,7 +667,7 @@ a {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 1023px) {
   .goods__item-link h3 {
@@ -705,8 +713,8 @@ a {
   position: relative;
   overflow: hidden;
   min-height: 878px;
-  background: #1B2D37 center url("../img/header_background.png");
-  color: #FFFFFF;
+  background: #1b2d37 center url("../img/header_background.png");
+  color: #ffffff;
 }
 @media (max-width: 1023px) {
   .page-header {
@@ -740,7 +748,7 @@ a {
   flex-shrink: 0;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   width: 180px;
   height: 45px;
@@ -750,7 +758,7 @@ a {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 1023px) {
   .page-header__upper-block button {
@@ -861,10 +869,10 @@ a {
   display: flex;
   flex-wrap: nowrap;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .page-header__contact-list-item a svg {
-  fill: #00B2FF;
+  fill: #00b2ff;
 }
 .page-header__contact-list-item a span {
   margin-left: 16px;
@@ -938,7 +946,7 @@ a {
   line-height: 94px;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 1023px) {
   .page-header__promo h2 {
@@ -980,7 +988,7 @@ a {
   content: "";
   width: 10%;
   height: 2px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 @media (max-width: 1023px) {
   .page-header__promo p::before {
@@ -997,12 +1005,12 @@ a {
   box-sizing: border-box;
   border-radius: 5px;
   border-style: none;
-  background-color: #00B2FF;
+  background-color: #00b2ff;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -1033,7 +1041,7 @@ a {
   }
 }
 @media (max-width: 767px) {
-  .page-header__promo-button-label:after {
+  .page-header__promo-button-label::after {
     content: "Бесплатная консультация";
   }
 }
@@ -1079,7 +1087,7 @@ a {
 
 .page-footer {
   position: relative;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   height: auto;
   padding: 65px 3% 0;
   box-sizing: border-box;
@@ -1211,7 +1219,7 @@ a {
     text-transform: uppercase;
     font-size: 13px;
     line-height: 24px;
-    color: #1B2D37;
+    color: #1b2d37;
     opacity: 0.5;
   }
 }
@@ -1245,7 +1253,7 @@ a {
 .page-footer__socials-item svg {
   width: 27px;
   height: 27px;
-  fill: #CDCDCD;
+  fill: #cdcdcd;
 }
 .page-footer__socials-item svg:hover {
   fill: #788891;
@@ -1310,7 +1318,7 @@ a {
 }
 
 .page-footer__menu-item {
-  color: #1B2D37;
+  color: #1b2d37;
   opacity: 0.5;
   font-size: 15px;
   line-height: 26px;
@@ -1379,7 +1387,7 @@ a {
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  color: #1B2D37;
+  color: #1b2d37;
   opacity: 0.5;
 }
 .page-footer__bottom-item--rights {
@@ -1436,7 +1444,7 @@ a {
   }
 }
 .page-footer__menu-toggle svg {
-  fill: #C4C4C4;
+  fill: #c4c4c4;
   width: 16px;
   height: 16px;
 }
@@ -1469,7 +1477,7 @@ a {
   }
 }
 .page-footer__address-toggle svg {
-  fill: #C4C4C4;
+  fill: #c4c4c4;
   width: 16px;
   height: 16px;
 }

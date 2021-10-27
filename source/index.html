@@ -188,7 +188,7 @@
             <label class="form__phone-label" for="phone">
               <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
             </label>
-            <textarea name="question" id="question" placeholder="Ваш вопрос" required>
+            <textarea name="question" placeholder="Ваш вопрос" required></textarea>
           </div>
           <div class="form__lower-block">
             <button>Задать вопрос</button>
@@ -310,14 +310,12 @@
         </svg>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <label for="name">
-          <input type="text" name="name" id="name" placeholder="Имя" required>
+          <input type="text" name="name" id="call-form-name" placeholder="Имя" required>
         </label>
         <label for="phone">
-          <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+          <input type="tel" name="phone" id="call-form-phone" placeholder="Телефон" required>
         </label>
-        <label for="question">
-          <input type="text" name="question" id="question" placeholder="Ваш вопрос">
-        </label>
+        <textarea type="text" name="question" id="call-form-question" placeholder="Ваш вопрос"></textarea>
         <button>Отправить</button>
         <div class="call-form__policy-container">
           <input type="checkbox" name="policy" id="policy" aria-label="согласие на обработку данных" required>
@@ -327,7 +325,8 @@
       </form>
     </div>
   </template>
+
+  <script src="js/script.js"></script>
 </body>
 
-<script src="js/script.js"></script>
 </html>

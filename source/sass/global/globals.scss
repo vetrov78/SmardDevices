@@ -26,13 +26,13 @@ a {
 .tablet-and-lower {
   display: none;
 
-  @media(max-width:$tablet-width) {
+  @media (max-width: $tablet-width) {
     display: inline;
   }
 }
 
 .desktop-only {
-  @media(max-width:$tablet-width) {
+  @media (max-width: $tablet-width) {
     display: none;
   }
 }
