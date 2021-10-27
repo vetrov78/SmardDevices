@@ -172,6 +172,34 @@
         </ul>
       </div>
     </section>
+
+    <section class="form">
+      <div class="form__container">
+        <div class="form__image-container">
+          <img src="img/paper_airplane_3d_model.png" width="511" height="288" alt="Бумажный самолетик">
+        </div>
+        <form method="POST" action="https://echo.htmlacademy.ru">
+          <h1>Остались вопросы? Задайте их нам!</h1>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <div class="form__inputs-container">
+            <label class="form__name-label" for="name">
+              <input type="text" name="name" id="name" placeholder="Имя" required>
+            </label>
+            <label class="form__phone-label" for="phone">
+              <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+            </label>
+            <textarea name="question" id="question" placeholder="Ваш вопрос" required>
+          </div>
+          <div class="form__lower-block">
+            <button>Задать вопрос</button>
+            <div class="form__policy-container">
+              <input type="checkbox" name="policy" id="policy" aria-label="согласие на обработку данных" required>
+              <label for="policy">Я согласен на обработку  персональных данных</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">

@@ -1,0 +1,186 @@
+.form {
+  width: 100%;
+  color: $main-white;
+  padding: 92px 0 110px;
+  box-sizing: border-box;
+  background: $main-blue left 175px top -60px no-repeat url("../img/form_polygons.svg");
+
+  @media(max-width:$tablet-width) {
+    background: $main-blue;
+    padding-top: 80px;
+  }
+}
+
+.form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+
+  & form {
+    margin-left: 7%;
+    flex: 0 0 570px;
+
+    @media(max-width:$tablet-width) {
+      flex: 1 0 590px;
+    }
+  }
+
+  @media(max-width:$tablet-width) {
+    justify-content: start;
+  }
+}
+
+.form__image-container {
+  margin-left: -30px;
+  flex: 0 0.7 511px;
+
+  @media(max-width:$tablet-width) {
+    display: none;
+  }
+}
+
+.form__container h1 {
+  margin: 0;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @media(max-width:$tablet-width) {
+    font-size: 32px;
+  line-height: 45px;
+  }
+}
+
+.form__container p {
+  margin: 7px 0 0;
+
+  @media(max-width:$tablet-width) {
+    margin-top: 15px;;
+  }
+}
+
+.form__inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 570px;
+  margin-top: 15px;
+
+  & label {
+    height: 50px;
+    margin-top: 40px;
+  }
+
+  & input {
+    width: 100%;
+    height: 100%;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    background-color: $form-input-background;
+    border: none;
+    color: $main-white;
+
+    &::placeholder {
+      font-family: "PTMono", "Arial", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: $main-white;
+    }
+  }
+
+  & textarea {
+    flex-basis: 100%;
+    min-height: 154px;
+    margin-top: 40px;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    background-color: $form-input-background;
+    border: none;
+    color: $main-white;
+
+    &::placeholder {
+      color: $main-white;
+    }
+  }
+}
+
+.form__name-label {
+  flex-basis: 270px;
+}
+
+.form__phone-label {
+  flex-basis: 269px;
+  margin-left: 31px;
+}
+
+.form__lower-block {
+  margin-top: 43px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__container button {
+  cursor: pointer;
+  width: 270px;
+  height: 47px;
+  background-color: transparent;
+  border-style: none;
+  border-radius: 5px;
+  border: 1px solid $main-white;
+  color: $main-white;
+  text-transform: uppercase;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+}
+
+.form__policy-container {
+  display: flex;
+  align-items: center;
+  max-width: 262px;
+
+  & label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    color: $policy-text;
+    font-size: 14px;
+    line-height: 16px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border: 1px solid $main-white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      width: 7px;
+      height: 5px;
+      border-left: 1px solid $main-white;
+      border-bottom: 1px solid $main-white;
+      transform: rotate(-45deg);
+    }
+  }
+
+  & input {
+    position: absolute;
+    left: -9999px;
+  };
+
+  & input:not(:checked) + label::after {
+    opacity: 0;
+  }
+}
+
