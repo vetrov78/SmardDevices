@@ -29,6 +29,7 @@
   }
 
   & button {
+    z-index: 1;
     flex-shrink: 0;
     cursor: pointer;
     background-color: transparent;
@@ -331,7 +332,7 @@
 }
 
 .page-header__image {
-  z-index: 0;
+  z-index: 1;
   position: absolute;
   top: 230px;
   left: 53%;
