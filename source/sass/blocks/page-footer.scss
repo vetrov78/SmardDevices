@@ -5,32 +5,8 @@
   padding: 65px 3% 0;
   box-sizing: border-box;
 
-  @media (max-width: $tablet-width) {
-    padding-top: 0;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding: 0;
-  }
-
   &::before {
     display: none;
-
-    @media (max-width: $tablet-width) {
-      display: block;
-      position: absolute;
-      content: "";
-      height: 1px;
-      left: 0;
-      top: 97px;
-      width: 100vw;
-      background-color: $footer-decoration;
-      opacity: 0.2;
-    }
-
-    @media (max-width: $mobile-width) {
-      top: 261px;
-    }
   }
 
   &::after {
@@ -42,8 +18,36 @@
     width: 100vw;
     background-color: $footer-decoration;
     opacity: 0.2;
+  }
 
-    @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 1px;
+      left: 0;
+      top: 97px;
+      width: 100vw;
+      background-color: $footer-decoration;
+      opacity: 0.2;
+    }
+
+    &::after {
+      bottom: 69px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+
+    &::before {
+      top: 261px;
+    }
+
+    &::after {
       bottom: 123px;
     }
   }
@@ -66,7 +70,8 @@
   flex-direction: column;
 
   @media (max-width: $tablet-width) {
-    flex-basis: 95px;
+    flex-grow: 0;
+    flex-basis: 97px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -85,10 +90,6 @@
     "logo text";
   grid-template-columns: auto 1fr;
   grid-template-rows: min-content min-content;
-
-  @media (max-width: $mobile-width) {
-    margin-top: 46px;
-  }
 
   & svg {
     grid-area: logo;
@@ -117,6 +118,14 @@
     line-height: 15px;
     color: $logo-text;
   }
+
+  @media (max-width: $tablet-width) {
+    margin-top: -10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 46px;
+  }
 }
 
 .page-footer__trademark-tablet {
@@ -124,9 +133,11 @@
 
   @media (max-width: $tablet-width) {
     display: block;
+    margin-left: 15px;
     text-transform: uppercase;
     font-size: 13px;
     line-height: 24px;
+    letter-spacing: 0.04em;
     color: $header-background;
     opacity: 0.5;
   }
@@ -147,6 +158,10 @@
   align-items: center;
   padding: 0;
   margin-top: 55px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+  }
 
   @media (max-width: $mobile-width) {
     margin-top: 31px;
@@ -176,6 +191,7 @@
 
   @media (max-width: $tablet-width) {
     flex-basis: auto;
+    padding-top: 38px;
   }
 
   @media (max-width: $mobile-width) {
@@ -187,8 +203,8 @@
   flex: 0 0.7 490px;
 
   @media (max-width: $tablet-width) {
+    flex-grow: 1;
     flex-basis: 375px;
-    padding-top: 38px;
   }
 
   @media (max-width: $mobile-width) {
@@ -220,6 +236,7 @@
 
   @media (max-width: $tablet-width) {
     height: 100%;
+    margin-top: 23px;
   }
 }
 
@@ -233,6 +250,11 @@
 .page-footer__address-block {
   position: relative;
   flex: 0 1 333px;
+
+  @media (max-width: $tablet-width) {
+    flex-grow: 1;
+    flex-basis: 345px;
+  }
 
   @media (max-width: $mobile-width) {
     flex-basis: auto;
@@ -264,6 +286,10 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 25px;
+  }
 }
 
 .page-footer__bottom-block {
@@ -277,7 +303,8 @@
   align-items: center;
 
   @media (max-width: $tablet-width) {
-    padding-top: 33px;
+    height: 69px;
+    margin: 33px 5px 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -294,41 +321,45 @@
   letter-spacing: 0.04em;
   color: $header-background;
   opacity: 0.5;
+  white-space: nowrap;
 
   &--rights {
     flex: 0 0 165px;
-
-    @media (max-width: $tablet-width) {
-      display: none;
-    }
   }
 
   &--trademark {
     flex: 0 0.2 292px;
     text-align: end;
-
-    @media (max-width: $tablet-width) {
-      display: none;
-    }
   }
 
   &--confidentials {
     flex: 0 0.4 359px;
     text-align: end;
-
-    @media (max-width: $tablet-width) {
-      flex: auto;
-      text-align: start;
-    }
   }
 
   &--developed {
     flex: 0 0.6 596px;
     text-align: end;
 
-    @media (max-width: $mobile-width) {
+
+  }
+
+  @media (max-width: $tablet-width) {
+    &--rights {
+      display: none;
+    }
+
+    &--trademark {
+      display: none;
+    }
+
+    &--confidentials {
       flex: auto;
-      margin-top: 23px;
+      text-align: start;
+    }
+
+    &--developed {
+      flex: auto;
     }
   }
 }
