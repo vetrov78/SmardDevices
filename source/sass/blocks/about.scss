@@ -67,7 +67,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 0 15px;
+    padding: 0 15px 65px;
 
     & img {
       display: none;
@@ -81,6 +81,10 @@
     & p {
       margin-top: 18px;
       padding-bottom: 20px;
+    }
+
+    & button {
+      margin-top: 13px;
     }
   }
 }
