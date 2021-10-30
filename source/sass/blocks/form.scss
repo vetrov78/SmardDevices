@@ -7,7 +7,7 @@
 
   @media (max-width: $tablet-width) {
     background: $main-blue;
-    padding-top: 80px;
+    padding: 80px 0 104px;
   }
 }
 
@@ -138,23 +138,31 @@
   margin-top: 43px;
   display: flex;
   justify-content: space-between;
-}
 
-.form__container button {
-  cursor: pointer;
-  width: 270px;
-  height: 47px;
-  background-color: transparent;
-  border-style: none;
-  border-radius: 5px;
-  border: 1px solid $main-white;
-  color: $main-white;
-  text-transform: uppercase;
-  font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
+  & button {
+    cursor: pointer;
+    width: 270px;
+    height: 47px;
+    background-color: transparent;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid $main-white;
+    color: $main-white;
+    text-transform: uppercase;
+    font-family: "RobotoCondensed", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 47px;
+
+    & button {
+      width: 280px;
+    }
+  }
 }
 
 .form__policy-container {
@@ -200,5 +208,9 @@
 
   & input:not(:checked) + label::after {
     opacity: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 270px;
   }
 }
