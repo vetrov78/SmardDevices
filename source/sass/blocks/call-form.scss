@@ -2,9 +2,9 @@
   position: absolute;
   z-index: 1100;
   top: 136px;
-  left: 40%;
+  left: 715px;
   width: 490px;
-  padding: 30px 40px 36px;
+  padding: 26px 40px 35px;
   box-sizing: border-box;
   background-color: $main-blue;
 }
@@ -28,6 +28,8 @@
 }
 
 .call-form__container p {
+  margin: 15px 0 0;
+  padding-right: 10px;
   color: $main-white;
   line-height: 22px;
 }
@@ -43,21 +45,45 @@
   color: $main-white;
 
   &::placeholder {
+    font-family: "PTMono", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $main-white;
+  }
+}
+
+.call-form__container textarea {
+  width: 100%;
+  min-height: 104px;
+  margin-top: 30px;
+  padding: 14px 24px;
+  box-sizing: border-box;
+  background-color: $form-input-background;
+  border: none;
+  color: $main-white;
+
+  &::placeholder {
+    font-family: "PTMono", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
     color: $main-white;
   }
 }
 
 .call-form__container button {
   cursor: pointer;
-  margin-top: 30px;
-  width: 412px;
-  padding: 14px 30px 8px;
+  margin-top: 27px;
+  width: 410px;
+  padding: 10px 30px 8px;
   height: 47px;
   background-color: transparent;
   border-style: none;
   border-radius: 5px;
   border: 1px solid $main-white;
   color: $main-white;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
@@ -70,8 +96,10 @@
 
   & label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
-    padding-left: 48px;
+    margin-left: 48px;
+    margin-right: 5px;
     color: $main-white;
     font-size: 14px;
     line-height: 16px;
@@ -79,9 +107,9 @@
     &::before {
       position: absolute;
       content: "";
-      left: 0;
-      width: 16px;
-      height: 16px;
+      left: -50px;
+      width: 15px;
+      height: 15px;
       background-color: transparent;
       border: 1px solid $main-white;
     }
@@ -89,8 +117,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 5px;
+      top: 2px;
+      left: -45px;
       width: 7px;
       height: 5px;
       border-left: 1px solid $main-white;
