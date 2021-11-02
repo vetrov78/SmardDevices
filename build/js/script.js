@@ -71,11 +71,12 @@ addressToggle.addEventListener('click', function () {
   }
 });
 
+// Ввод номера телефона в соотв.с маской
 Array.prototype.forEach.call(document.querySelectorAll('[data-mask]'), applyDataMask);
 function applyDataMask(field) {
   var mask = field.dataset.mask.split('');
 
-  // For now, this just strips everything that's not a number
+  // Принимает строку значения, возвращает массив из цифр, содержащихся в строке
   function stripMask(maskedData) {
     function isDigit(char) {
       return /\d/.test(char);
@@ -121,4 +122,7 @@ function applyDataMask(field) {
   field.addEventListener('keyup', changed);
 }
 
-
+var headerButton = document.querySelector('.page-header__promo-button');
+headerButton.addEventListener('click', function () {
+  window.location.href = '#form';
+});
