@@ -37,7 +37,7 @@
               </a>
             </li>
             <li class="page-header__contact-list-item">
-              <a href="tel:+7(495)0005252">
+              <a href="tel:+74950005252">
                 <svg class="page-header__list-item-logo page-header__list-item-logo--phone">
                   <use xlink:href="img/sprite.svg#phone"></use>
                 </svg>
@@ -47,12 +47,12 @@
           </ul>
         </li>
       </ul>
-      <button id="call-request-button">Заказать звонок</button>
+      <button type="button" id="call-request-button">Заказать звонок</button>
     </div>
     <div class="page-header__promo">
       <h2>Печатные платы</h2>
       <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button class="page-header__promo-button">
+      <button type="button" class="page-header__promo-button">
         <span>Получить бесплатную консультацию</span>
       </button>
     </div>
@@ -117,7 +117,7 @@
           (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
         </span>
       </p>
-      <button>Подробнее</button>
+      <button type="button">Подробнее</button>
     </section>
 
     <section class="goods">
@@ -179,22 +179,23 @@
     <section class="form" id="form">
       <div class="form__container">
         <div class="form__image-container">
-          <img src="img/paper_airplane_3d_model.png" width="511" height="288" alt="Бумажный самолетик">
+          <source type="image/webp" srcset="./img/paper_airplane_3d_model@1x.webp 1x, ./img/paper_airplane_3d_model@2x.webp 2x">
+          <!-- 1x: 511x288 ; 2x: 1022x576 -->
+          <img src="img/paper_airplane_3d_model@1x.png"  srcset="img/paper_airplane_3d_model@2x.png 2x" width="511" height="288" alt="Бумажный самолетик">
         </div>
         <form method="POST" action="https://echo.htmlacademy.ru">
           <h1>Остались вопросы? Задайте их нам!</h1>
           <p>Мы проконсультируем Вас бесплатно</p>
           <div class="form__inputs-container">
-            <label class="form__name-label" for="name">
-              <input type="text" name="name" id="name" placeholder="Имя" required>
-            </label>
-            <label class="form__phone-label" for="phone">
-              <input type="tel" name="phone" id="phone" data-mask="+7(___)_______" placeholder="Телефон" required>
-            </label>
-            <textarea name="question" placeholder="Ваш вопрос" required></textarea>
+            <input type="text" name="name" id="name" placeholder="Имя" required>
+            <label class="form__name-label" for="name">Введите имя</label>
+            <label class="form__phone-label" for="phone">Введите номер телефона</label>
+            <input type="tel" name="phone" id="phone" data-mask="+7(___)_______" placeholder="Телефон" required>
+            <label for="question-area">Введите Ваш вопрос</label>
+            <textarea name="question" id="question-area" placeholder="Ваш вопрос" required></textarea>
           </div>
           <div class="form__lower-block">
-            <button>Задать вопрос</button>
+            <button type="button">Задать вопрос</button>
             <div class="form__policy-container">
               <input type="checkbox" name="policy" id="policy" aria-label="согласие на обработку данных" required>
               <label for="policy">Я согласен на обработку  персональных данных</label>
@@ -279,9 +280,15 @@
           </div>
           <ul class="page-footer__address-list">
             <li class="page-footer__menu-item">г. Мытищи, Олимпийский проспект, д.10</li>
-            <li class="page-footer__menu-item">+7 (495) 589-40-50</li>
-            <li class="page-footer__menu-item">+7 (925) 003-87-67</li>
-            <li class="page-footer__menu-item">+7 (926) 926-080-79</li>
+            <li>
+              <a class="page-footer__menu-item" href="tel:+74955894050">+7 (495) 589-40-50</a>
+            </li>
+            <li>
+              <a class="page-footer__menu-item" href="tel:+79250038767">+7 (925) 003-87-67</a>
+            </li>
+            <li>
+              <a class="page-footer__menu-item" href="tel:+792692608079">+7 (926) 926-080-79</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -312,14 +319,14 @@
         </svg>
         <h1>Закажите звонок</h1>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <label for="name">
-          <input type="text" name="name" id="call-form-name" placeholder="Имя" required>
-        </label>
-        <label for="phone">
-          <input type="tel" name="phone" id="call-form-phone" placeholder="Телефон" required>
-        </label>
+        <label for="name">Введите имя</label>
+        <input type="text" name="name" id="call-form-name" placeholder="Имя" required>
+
+        <label for="phone">Введите номер телефона</label>
+        <input type="tel" name="phone" id="call-form-phone" placeholder="Телефон" required>
+
         <textarea type="text" name="question" id="call-form-question" placeholder="Ваш вопрос"></textarea>
-        <button>Отправить</button>
+        <button type="button">Отправить</button>
         <div class="call-form__policy-container">
           <input type="checkbox" name="policy-popup" id="policy-popup" aria-label="согласие на обработку данных" required>
           <label for="policy-popup">Я согласен на обработку  персональных данных</label>
