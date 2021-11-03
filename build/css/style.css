@@ -361,7 +361,6 @@ a {
   padding: 10px 30px 8px;
   height: 47px;
   background-color: transparent;
-  border-style: none;
   border-radius: 5px;
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -515,7 +514,7 @@ a {
   margin-top: 40px;
   padding: 14px 16px;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #19baff;
   border: none;
   color: #ffffff;
 }
@@ -535,7 +534,7 @@ a {
   margin-top: 40px;
   padding: 14px 16px;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #19baff;
   border: none;
   color: #ffffff;
 }
@@ -870,28 +869,6 @@ a {
     margin: 10px 15px 0 17px;
   }
 }
-.page-header__upper-block button {
-  z-index: 1;
-  flex-shrink: 0;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  width: 180px;
-  height: 45px;
-  margin-left: 48px;
-  margin-right: 6px;
-  padding: 14px 13px 8px;
-  font-size: 14px;
-  line-height: 17px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-@media (max-width: 1023px) {
-  .page-header__upper-block button {
-    display: none;
-  }
-}
 
 .page-header__list {
   flex-grow: 1;
@@ -1041,7 +1018,7 @@ a {
 }
 
 .page-header__promo {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 315px;
   left: 13%;
@@ -1427,19 +1404,24 @@ a {
 @media (max-width: 767px) {
   .page-footer__menu-block {
     flex-basis: auto;
-    padding: 26px 15px;
   }
 }
 
-.page-footer__menu-header {
+.page-footer__header {
   display: flex;
   justify-content: space-between;
 }
-.page-footer__menu-header h2 {
+.page-footer__header h2 {
   margin: 0;
   text-transform: uppercase;
   font-size: 15px;
   line-height: 16px;
+}
+@media (max-width: 767px) {
+  .page-footer__header {
+    cursor: pointer;
+    padding: 26px 15px;
+  }
 }
 
 .page-footer__menu-list {
@@ -1454,7 +1436,7 @@ a {
 @media (max-width: 1023px) {
   .page-footer__menu-list {
     height: 100%;
-    margin-top: 23px;
+    margin: 0 15px 23px;
   }
 }
 
@@ -1478,7 +1460,6 @@ a {
 @media (max-width: 767px) {
   .page-footer__address-block {
     flex-basis: auto;
-    padding: 26px 15px;
   }
   .page-footer__address-block::before {
     position: absolute;
@@ -1512,6 +1493,7 @@ a {
 }
 @media (max-width: 767px) {
   .page-footer__address-list {
+    margin: 0 15px 23px;
     padding-right: 10px;
   }
 }

@@ -179,9 +179,11 @@
     <section class="form" id="form">
       <div class="form__container">
         <div class="form__image-container">
-          <source type="image/webp" srcset="./img/paper_airplane_3d_model@1x.webp 1x, ./img/paper_airplane_3d_model@2x.webp 2x">
-          <!-- 1x: 511x288 ; 2x: 1022x576 -->
-          <img src="img/paper_airplane_3d_model@1x.png"  srcset="img/paper_airplane_3d_model@2x.png 2x" width="511" height="288" alt="Бумажный самолетик">
+          <picture>
+            <source type="image/webp" srcset="./img/paper_airplane_3d_model@1x.webp 1x, ./img/paper_airplane_3d_model@2x.webp 2x">
+            <!-- 1x: 511x288 ; 2x: 1022x576 -->
+            <img src="img/paper_airplane_3d_model@1x.png"  srcset="img/paper_airplane_3d_model@2x.png 2x" width="511" height="288" alt="Бумажный самолетик">
+          </picture>
         </div>
         <form method="POST" action="https://echo.htmlacademy.ru">
           <h1>Остались вопросы? Задайте их нам!</h1>
@@ -245,7 +247,7 @@
       </div>
       <div class="page-footer__menu-address-wrapper no-js">
         <div class="page-footer__menu-block">
-          <div class="page-footer__menu-header">
+          <div class="page-footer__header page-footer__header--menu">
             <h2>Разделы сайта</h2>
             <div class="page-footer__menu-toggle">
               <svg class="page-footer__menu-open-icon">
@@ -267,7 +269,7 @@
           </ul>
         </div>
         <div class="page-footer__address-block">
-          <div class="page-footer__menu-header">
+          <div class="page-footer__header page-footer__header--address">
             <h2>Наш офис</h2>
             <div class="page-footer__address-toggle">
               <svg class="page-footer__address-open-icon">
