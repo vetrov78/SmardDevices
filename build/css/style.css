@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "PTMono";
-  src: url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff2") format("woff");
+  src: url("../fonts/ptmono-regular.woff2") format("woff2"), url("../fonts/ptmono-regular.woff2") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,21 +11,21 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../fonts/robotocondensed-regular.woff") format("woff");
 }
 @font-face {
   font-family: "RobotoCondensed";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: url("../fonts/robotocondensed-bold.woff2") format("woff2"), url("../fonts/robotocondensed-bold.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
 }
 body {
   margin: 0;
@@ -63,6 +63,29 @@ a {
 
 @media (max-width: 1023px) {
   .desktop-only {
+    display: none;
+  }
+}
+
+.call-request-button {
+  z-index: 1;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  width: 180px;
+  height: 45px;
+  margin-left: 48px;
+  margin-right: 6px;
+  padding: 14px 13px 8px;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media (max-width: 1023px) {
+  .call-request-button {
     display: none;
   }
 }
@@ -255,10 +278,11 @@ a {
 }
 
 .call-form__container {
-  position: absolute;
+  position: fixed;
   z-index: 1100;
   top: 136px;
-  left: 715px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 490px;
   padding: 26px 40px 35px;
   box-sizing: border-box;
@@ -354,10 +378,11 @@ a {
 }
 .call-form__policy-container label {
   position: relative;
-  display: inline-block;
   cursor: pointer;
-  margin-left: 48px;
-  margin-right: 5px;
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 48px;
+  padding-right: 5px;
   color: #ffffff;
   font-size: 14px;
   line-height: 16px;
@@ -365,17 +390,18 @@ a {
 .call-form__policy-container label::before {
   position: absolute;
   content: "";
-  left: -50px;
-  width: 15px;
-  height: 15px;
+  top: 2px;
+  left: -1px;
+  width: 14px;
+  height: 14px;
   background-color: transparent;
   border: 1px solid #ffffff;
 }
 .call-form__policy-container label::after {
   content: "";
   position: absolute;
-  top: 2px;
-  left: -45px;
+  top: 3px;
+  left: 3px;
   width: 7px;
   height: 5px;
   border-left: 1px solid #ffffff;
@@ -794,6 +820,7 @@ a {
 
 .page {
   height: 100%;
+  overflow-x: hidden;
   font-family: "PTMono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1098,7 +1125,7 @@ a {
   }
 }
 
-.page-header__promo button {
+.page-header__promo-button {
   cursor: pointer;
   width: 407px;
   margin: 40px 0 37px 98px;
@@ -1116,22 +1143,22 @@ a {
   letter-spacing: 0.05em;
 }
 @media (max-width: 1023px) {
-  .page-header__promo button {
+  .page-header__promo-button {
     width: 379px;
     margin: 55px 0 40px 51px;
     padding: 17px 14px 20px;
   }
 }
 @media (max-width: 767px) {
-  .page-header__promo button {
+  .page-header__promo-button {
     width: auto;
     min-width: 287px;
     margin: 37px 0 0;
   }
-  .page-header__promo button span {
+  .page-header__promo-button span {
     display: none;
   }
-  .page-header__promo button::after {
+  .page-header__promo-button::after {
     content: "Бесплатная консультация";
   }
 }

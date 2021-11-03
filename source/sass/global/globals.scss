@@ -36,3 +36,25 @@ a {
     display: none;
   }
 }
+
+.call-request-button {
+  z-index: 1;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $main-white;
+  border-radius: 5px;
+  width: 180px;
+  height: 45px;
+  margin-left: 48px;
+  margin-right: 6px;
+  padding: 14px 13px 8px;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: $main-white;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
