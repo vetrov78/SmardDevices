@@ -210,11 +210,10 @@
 
   @media (max-width: $mobile-width) {
     flex-basis: auto;
-    padding: 26px 15px;
   }
 }
 
-.page-footer__menu-header {
+.page-footer__header {
   display: flex;
   justify-content: space-between;
 
@@ -223,6 +222,11 @@
     text-transform: uppercase;
     font-size: 15px;
     line-height: 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    cursor: pointer;
+    padding: 26px 15px;
   }
 }
 
@@ -237,7 +241,7 @@
 
   @media (max-width: $tablet-width) {
     height: 100%;
-    margin-top: 23px;
+    margin: 0 15px 23px;
   }
 }
 
@@ -259,7 +263,6 @@
 
   @media (max-width: $mobile-width) {
     flex-basis: auto;
-    padding: 26px 15px;
 
     &::before {
       position: absolute;
@@ -293,6 +296,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0 15px 23px;
     padding-right: 10px;
   }
 }

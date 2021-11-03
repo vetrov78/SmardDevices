@@ -50,8 +50,8 @@
   var addressBlock = document.querySelector('.page-footer__address-block');
   addressBlock.classList.add('page-footer__address-block--closed');
 
-  var menuToggle = document.querySelector('.page-footer__menu-toggle');
-  menuToggle.addEventListener('click', function () {
+  var footerMenuHeader = document.querySelector('.page-footer__header--menu');
+  footerMenuHeader.addEventListener('click', function () {
     if (menuBlock.classList.contains('page-footer__menu-block--closed')) {
       menuBlock.classList.remove('page-footer__menu-block--closed');
       menuBlock.classList.add('page-footer__menu-block--opened');
@@ -65,8 +65,8 @@
     }
   });
 
-  var addressToggle = document.querySelector('.page-footer__address-toggle');
-  addressToggle.addEventListener('click', function () {
+  var footerAddressHeader = document.querySelector('.page-footer__header--address');
+  footerAddressHeader.addEventListener('click', function () {
     if (addressBlock.classList.contains('page-footer__address-block--closed')) {
       addressBlock.classList.remove('page-footer__address-block--closed');
       addressBlock.classList.add('page-footer__address-block--opened');
