@@ -4,6 +4,7 @@
   max-width: 1220px;
   padding: 0 27px 110px 205px;
   box-sizing: border-box;
+  color: $about-title;
 
   & img {
     position: absolute;
@@ -16,7 +17,6 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 50px;
-    color: $about-title;
   }
 
   & p {

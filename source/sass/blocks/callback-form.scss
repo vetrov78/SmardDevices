@@ -1,9 +1,18 @@
-.form {
+.callback-form {
+  display: flex;
+  justify-content: end;
   width: 100%;
   color: $main-white;
-  padding: 92px 0 110px;
+  padding: 95px 0 110px;
   box-sizing: border-box;
-  background: $main-blue left 175px top -60px no-repeat url("../img/form_polygons.svg");
+  background: left 350px top 160px no-repeat url("../img/paper_airplane_3d_model@1x.png"),
+    $main-blue left 175px top -60px no-repeat url("../img/form_polygons.svg");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: left 350px top 160px no-repeat url("../img/paper_airplane_3d_model@2x.png"),
+      $main-blue left 175px top -60px no-repeat url("../img/form_polygons.svg");
+    background-size: 511px 288px, 1745px 765px;
+  }
 
   @media (max-width: $tablet-width) {
     background: $main-blue;
@@ -15,11 +24,9 @@
   }
 }
 
-.form__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 5%;
+.callback-form form {
+  padding-right: 20%;
+  width: 570px;
 
   & h1 {
     margin: 0;
@@ -33,14 +40,9 @@
     margin: 7px 0 0;
   }
 
-  & form {
-    margin-left: 7%;
-    flex: 0 0 570px;
-  }
-
   @media (max-width: $tablet-width) {
-    justify-content: start;
     padding: 0 11%;
+    width: 590px;
 
     & h1 {
       margin-left: -3px;
@@ -51,15 +53,11 @@
     & p {
       margin-top: 15px;
     }
-
-    & form {
-      margin-left: 8px;
-      flex: 1 0 590px;
-    }
   }
 
   @media (max-width: $mobile-width) {
     padding: 0 5%;
+    width: auto;
 
     & h1 {
       font-size: 28px;
@@ -69,24 +67,10 @@
     & p {
       margin-top: 10px;
     }
-
-    & form {
-      margin-left: 0;
-      flex: 1 0 290px;
-    }
   }
 }
 
-.form__image-container {
-  margin-left: -30px;
-  flex: 0 0.7 511px;
-
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.form__inputs-container {
+.callback-form__inputs-container {
   display: flex;
   flex-wrap: wrap;
   max-width: 570px;
@@ -174,7 +158,7 @@
   }
 }
 
-.form__lower-block {
+.callback-form__lower-block {
   margin-top: 43px;
   display: flex;
   justify-content: space-between;
@@ -214,7 +198,7 @@
   }
 }
 
-.form__policy-container {
+.callback-form__policy-container {
   display: flex;
   align-items: center;
   max-width: 262px;
@@ -267,3 +251,4 @@
     margin-top: 30px;
   }
 }
+

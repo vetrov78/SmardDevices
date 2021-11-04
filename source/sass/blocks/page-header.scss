@@ -2,8 +2,13 @@
   position: relative;
   overflow: hidden;
   min-height: 878px;
-  background: $header-background center url("../img/header_background.png");
   color: $main-white;
+  background: $header-background center url("../img/header_background@1x.png");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/header_background@2x.png");
+    background-size: 1920px 878px;
+  }
 
   @media (max-width: $tablet-width) {
     min-height: 686px;
@@ -332,7 +337,8 @@
 
 .page-header__polygons-svg {
   position: absolute;
-  bottom: -35px;
+  fill: transparent;
+  bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
   width: 1920px;

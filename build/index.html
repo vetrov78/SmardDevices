@@ -176,19 +176,11 @@
       </div>
     </section>
 
-    <section class="form" id="form">
-      <div class="form__container">
-        <div class="form__image-container">
-          <picture>
-            <source type="image/webp" srcset="./img/paper_airplane_3d_model@1x.webp 1x, ./img/paper_airplane_3d_model@2x.webp 2x">
-            <!-- 1x: 511x288 ; 2x: 1022x576 -->
-            <img src="img/paper_airplane_3d_model@1x.png"  srcset="img/paper_airplane_3d_model@2x.png 2x" width="511" height="288" alt="Бумажный самолетик">
-          </picture>
-        </div>
-        <form method="POST" action="https://echo.htmlacademy.ru">
+    <section class="callback-form" id="form">
+      <form method="POST" action="https://echo.htmlacademy.ru">
           <h1>Остались вопросы? Задайте их нам!</h1>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <div class="form__inputs-container">
+          <div class="callback-form__inputs-container">
             <input type="text" name="name" id="name" placeholder="Имя" required>
             <label class="form__name-label" for="name">Введите имя</label>
             <label class="form__phone-label" for="phone">Введите номер телефона</label>
@@ -196,15 +188,14 @@
             <label for="question-area">Введите Ваш вопрос</label>
             <textarea name="question" id="question-area" placeholder="Ваш вопрос" required></textarea>
           </div>
-          <div class="form__lower-block">
+          <div class="callback-form__lower-block">
             <button type="button">Задать вопрос</button>
-            <div class="form__policy-container">
+            <div class="callback-form__policy-container">
               <input type="checkbox" name="policy" id="policy" aria-label="согласие на обработку данных" required>
               <label for="policy">Я согласен на обработку  персональных данных</label>
             </div>
           </div>
-        </form>
-      </div>
+      </form>
     </section>
   </main>
 
