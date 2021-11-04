@@ -304,27 +304,27 @@
 
   </footer>
 
-  <template id="call-form">
-    <div class="call-form__container">
+  <template id="callback-popup">
+    <div class="callback-popup__container">
       <form method="POST" action="https://echo.htmlacademy.ru">
-        <svg class="call-form__close-icon">
-          <use xlink:href="/img/sprite.svg#close-icon"></use>
-        </svg>
+        <button class="callback-popup__close-button" type="button">
+          <svg>
+            <use xlink:href="/img/sprite.svg#close-icon"></use>
+          </svg>
+        </button>
         <h1>Закажите звонок</h1>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <label for="name">Введите имя</label>
-        <input type="text" name="name" id="call-form-name" placeholder="Имя" required>
-
-        <label for="phone">Введите номер телефона</label>
-        <input type="tel" name="phone" id="call-form-phone" placeholder="Телефон" required>
-
-        <textarea type="text" name="question" id="call-form-question" placeholder="Ваш вопрос"></textarea>
-        <button type="button">Отправить</button>
-        <div class="call-form__policy-container">
+        <label for="popup-name">Введите имя</label>
+        <input type="text" name="name" id="popup-name" placeholder="Имя" required>
+        <label for="popup-phone">Введите номер телефона</label>
+        <input type="tel" name="phone" id="popup-phone" placeholder="Телефон" required>
+        <label for="popup-question"></label>
+        <textarea type="text" name="question" id="popup-question" placeholder="Ваш вопрос"></textarea>
+        <button class="callback-popup__send-button" type="button">Отправить</button>
+        <div class="callback-popup__policy-container">
           <input type="checkbox" name="policy-popup" id="policy-popup" aria-label="согласие на обработку данных" required>
           <label for="policy-popup">Я согласен на обработку  персональных данных</label>
         </div>
-
       </form>
     </div>
   </template>

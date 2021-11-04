@@ -277,7 +277,7 @@ a {
   }
 }
 
-.call-form__container {
+.callback-popup__container {
   position: fixed;
   z-index: 1100;
   top: 136px;
@@ -289,16 +289,24 @@ a {
   background-color: #00b2ff;
 }
 
-.call-form__close-icon {
+.callback-popup__close-button {
   position: absolute;
   cursor: pointer;
   top: 20px;
   right: 20px;
   width: 17px;
   height: 17px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.callback-popup__close-button svg {
+  width: 100%;
+  height: 100%;
+  fill: #ffffff;
 }
 
-.call-form__container h1 {
+.callback-popup__container h1 {
   margin: 0;
   color: #ffffff;
   font-family: "RobotoCondensed", "Arial", sans-serif;
@@ -307,18 +315,18 @@ a {
   line-height: 40px;
 }
 
-.call-form__container p {
+.callback-popup__container p {
   margin: 15px 0 0;
   padding-right: 10px;
   color: #ffffff;
   line-height: 22px;
 }
 
-.call-form__container label {
+.callback-popup__container label {
   display: none;
 }
 
-.call-form__container input {
+.callback-popup__container input {
   margin-top: 30px;
   width: 412px;
   height: 52px;
@@ -328,7 +336,7 @@ a {
   border: none;
   color: #ffffff;
 }
-.call-form__container input::placeholder {
+.callback-popup__container input::placeholder {
   font-family: "PTMono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -336,7 +344,7 @@ a {
   color: #ffffff;
 }
 
-.call-form__container textarea {
+.callback-popup__container textarea {
   width: 100%;
   min-height: 104px;
   margin-top: 30px;
@@ -346,7 +354,7 @@ a {
   border: none;
   color: #ffffff;
 }
-.call-form__container textarea::placeholder {
+.callback-popup__container textarea::placeholder {
   font-family: "PTMono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -354,7 +362,7 @@ a {
   color: #ffffff;
 }
 
-.call-form__container button {
+.callback-popup__send-button {
   cursor: pointer;
   margin-top: 27px;
   width: 410px;
@@ -372,10 +380,10 @@ a {
   line-height: 16px;
 }
 
-.call-form__policy-container {
+.callback-popup__policy-container {
   margin-top: 34px;
 }
-.call-form__policy-container label {
+.callback-popup__policy-container label {
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -386,7 +394,7 @@ a {
   font-size: 14px;
   line-height: 16px;
 }
-.call-form__policy-container label::before {
+.callback-popup__policy-container label::before {
   position: absolute;
   content: "";
   top: 2px;
@@ -396,7 +404,7 @@ a {
   background-color: transparent;
   border: 1px solid #ffffff;
 }
-.call-form__policy-container label::after {
+.callback-popup__policy-container label::after {
   content: "";
   position: absolute;
   top: 3px;
@@ -407,11 +415,11 @@ a {
   border-bottom: 1px solid #ffffff;
   transform: rotate(-45deg);
 }
-.call-form__policy-container input {
+.callback-popup__policy-container input {
   position: absolute;
   left: -9999px;
 }
-.call-form__policy-container input:not(:checked) + label::after {
+.callback-popup__policy-container input:not(:checked) + label::after {
   opacity: 0;
 }
 
@@ -540,6 +548,9 @@ a {
   .callback-form__inputs-container label:not(:first-child) {
     margin-left: 30px;
   }
+  .callback-form__inputs-container input {
+    flex-basis: 279px;
+  }
   .callback-form__inputs-container textarea {
     min-height: 159px;
   }
@@ -553,6 +564,13 @@ a {
     margin-top: 30px;
   }
   .callback-form__inputs-container label:not(:first-child) {
+    margin-left: 0;
+  }
+  .callback-form__inputs-container input {
+    margin-top: 30px;
+    flex-basis: 290px;
+  }
+  .callback-form__inputs-container input:not(:first-child) {
     margin-left: 0;
   }
   .callback-form__inputs-container textarea {

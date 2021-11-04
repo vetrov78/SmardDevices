@@ -1,8 +1,8 @@
 'use strict';
 (function () {
-  var callFormTemplate = document.querySelector('#call-form')
+  var callFormTemplate = document.querySelector('#callback-popup')
       .content
-      .querySelector('.call-form__container');
+      .querySelector('.callback-popup__container');
 
   var callRequestButton = document.querySelector('#call-request-button');
   var windowExistFlag = false;
@@ -11,11 +11,11 @@
     if (!windowExistFlag) {
       var callRequestWindow = callFormTemplate.cloneNode(true);
       document.body.appendChild(callRequestWindow);
-      var closeIcon = document.querySelector('.call-form__close-icon');
+      var closeButton = document.querySelector('.callback-popup__close-button');
       windowExistFlag = true;
       window.addEventListener('click', function (evt) {
         var isPathContainForm = function (x) {
-          return (typeof x.className === 'string') ? x.className.includes('call-form__container') || x.id.includes('call-request-button') : false;
+          return (typeof x.className === 'string') ? x.className.includes('callback-popup__container') || x.id.includes('call-request-button') : false;
         };
         if (!evt.path.some(isPathContainForm)) {
           removeModal(evt);
@@ -35,11 +35,11 @@
       evt.preventDefault();
       callRequestWindow.remove();
       document.removeEventListener('keydown', onEscRemoveModal);
-      closeIcon.removeEventListener('click', removeModal);
+      closeButton.removeEventListener('click', removeModal);
       windowExistFlag = false;
     };
     document.addEventListener('keydown', onEscRemoveModal);
-    closeIcon.addEventListener('click', removeModal);
+    closeButton.addEventListener('click', removeModal);
   });
 
   // Реализация аккордеона
