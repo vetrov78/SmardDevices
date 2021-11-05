@@ -25,6 +25,7 @@
   }
 
   & button {
+    cursor: pointer;
     width: 180px;
     height: 45px;
     margin: 35px 0 0;
@@ -38,6 +39,11 @@
     line-height: 16px;
     letter-spacing: 0.05em;
     color: $main-blue;
+
+    &:hover{
+      color: $about-title;
+      border-color: $about-title;
+    }
   }
 
   @media (max-width: $tablet-width) {

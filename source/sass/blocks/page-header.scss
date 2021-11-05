@@ -22,7 +22,8 @@
 .page-header__upper-block {
   display: flex;
   align-items: center;
-  margin: 33px 13%;
+  margin: 33px auto;
+  max-width: 1411px;
   height: 52px;
 
   @media (max-width: $tablet-width) {
@@ -252,7 +253,7 @@
     left: -94px;
     top: 17px;
     content: "";
-    width: 10%;
+    width: 66px;
     height: 2px;
     background-color: $main-white;
 
@@ -281,6 +282,10 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
   @media (max-width: $tablet-width) {
     width: 379px;
     margin: 55px 0 40px 51px;
@@ -297,18 +302,6 @@
     }
 
     &::after {
-      content: "Бесплатная консультация";
-    }
-  }
-}
-
-.page-header__promo-button-label {
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
-
-  &::after {
-    @media (max-width: $mobile-width) {
       content: "Бесплатная консультация";
     }
   }

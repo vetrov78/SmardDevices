@@ -180,7 +180,7 @@
     cursor: pointer;
     width: 270px;
     height: 47px;
-    background-color: transparent;
+    background-color: $main-blue;
     border-style: none;
     border-radius: 5px;
     border: 1px solid $main-white;
@@ -191,6 +191,11 @@
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.05em;
+
+    &:hover{
+      color: $about-title;
+      border-color: $about-title;
+    }
   }
 
   @media (max-width: $tablet-width) {

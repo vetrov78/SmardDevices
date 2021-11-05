@@ -84,6 +84,9 @@ a {
   text-transform: uppercase;
   color: #ffffff;
 }
+.call-request-button:hover {
+  border-color: #666666;
+}
 @media (max-width: 1023px) {
   .call-request-button {
     display: none;
@@ -114,6 +117,7 @@ a {
   padding-bottom: 5px;
 }
 .about button {
+  cursor: pointer;
   width: 180px;
   height: 45px;
   margin: 35px 0 0;
@@ -127,6 +131,10 @@ a {
   line-height: 16px;
   letter-spacing: 0.05em;
   color: #00b2ff;
+}
+.about button:hover {
+  color: #666666;
+  border-color: #666666;
 }
 @media (max-width: 1023px) {
   .about {
@@ -588,7 +596,7 @@ a {
   cursor: pointer;
   width: 270px;
   height: 47px;
-  background-color: transparent;
+  background-color: #00b2ff;
   border-style: none;
   border-radius: 5px;
   border: 1px solid #ffffff;
@@ -599,6 +607,10 @@ a {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
+}
+.callback-form__lower-block button:hover {
+  color: #666666;
+  border-color: #666666;
 }
 @media (max-width: 1023px) {
   .callback-form__lower-block {
@@ -865,7 +877,8 @@ a {
 .page-header__upper-block {
   display: flex;
   align-items: center;
-  margin: 33px 13%;
+  margin: 33px auto;
+  max-width: 1411px;
   height: 52px;
 }
 @media (max-width: 1023px) {
@@ -1099,7 +1112,7 @@ a {
   left: -94px;
   top: 17px;
   content: "";
-  width: 10%;
+  width: 66px;
   height: 2px;
   background-color: #ffffff;
 }
@@ -1128,6 +1141,9 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+.page-header__promo-button:hover {
+  opacity: 0.6;
+}
 @media (max-width: 1023px) {
   .page-header__promo-button {
     width: 379px;
@@ -1145,17 +1161,6 @@ a {
     display: none;
   }
   .page-header__promo-button::after {
-    content: "Бесплатная консультация";
-  }
-}
-
-@media (max-width: 767px) {
-  .page-header__promo-button-label {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .page-header__promo-button-label::after {
     content: "Бесплатная консультация";
   }
 }
