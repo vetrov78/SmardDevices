@@ -11,6 +11,7 @@
     if (!windowExistFlag) {
       var callRequestWindow = callFormTemplate.cloneNode(true);
       document.body.appendChild(callRequestWindow);
+      applyDataMask(callRequestWindow.querySelector('[data-mask]'));
       var closeButton = document.querySelector('.callback-popup__close-button');
       windowExistFlag = true;
       window.addEventListener('click', function (evt) {
@@ -131,6 +132,7 @@
     field.addEventListener('keyup', changed);
   }
 
+  // скролл при нажатии "Получить бесплатную консультацию"
   var headerButton = document.querySelector('.page-header__promo-button');
   headerButton.addEventListener('click', function () {
     window.location.href = '#form';

@@ -387,6 +387,10 @@ a {
   font-size: 14px;
   line-height: 16px;
 }
+.callback-popup__send-button:hover {
+  color: #666666;
+  border-color: #666666;
+}
 
 .callback-popup__policy-container {
   margin-top: 34px;

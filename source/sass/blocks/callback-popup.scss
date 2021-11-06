@@ -102,6 +102,11 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+
+  &:hover{
+    color: $about-title;
+    border-color: $about-title;
+  }
 }
 
 .callback-popup__policy-container {
