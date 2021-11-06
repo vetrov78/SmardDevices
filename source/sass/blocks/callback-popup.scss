@@ -117,7 +117,6 @@
     cursor: pointer;
     display: inline-block;
     vertical-align: bottom;
-
     padding-left: 48px;
     padding-right: 5px;
     color: $main-white;
@@ -151,6 +150,10 @@
   & input {
     position: absolute;
     left: -9999px;
+  }
+
+  & input:focus + label {
+    outline: 1px solid $about-title;
   }
 
   & input:not(:checked) + label::after {
