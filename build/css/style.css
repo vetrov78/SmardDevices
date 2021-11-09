@@ -1428,6 +1428,12 @@ a {
     margin: 23px 0 29px;
   }
 }
+@media (max-width: 767px) {
+  .page-footer__menu-list {
+    margin: 0 15px 23px;
+    padding-right: 10px;
+  }
+}
 
 .page-footer__menu-item {
   color: #1b2d37;
