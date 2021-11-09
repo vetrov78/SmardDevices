@@ -3,7 +3,7 @@
   justify-content: center;
   width: 100%;
   color: $main-white;
-  padding: 95px 0 110px;
+  padding: 95px 0 108px;
   box-sizing: border-box;
   background: $main-blue left 175px top -60px no-repeat url("../img/form_polygons.svg");
 
@@ -70,6 +70,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0;
     padding: 0 5%;
     flex: 1 0 290px;
     width: auto;

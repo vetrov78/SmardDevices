@@ -188,11 +188,16 @@
 
   & h2 {
     margin: 0;
-    margin-left: 4px;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 15px;
     line-height: 16px;
+  }
+
+  @media (max-width: $tablet-width) {
+    & h2 {
+      margin-left: 3px;
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -208,7 +213,7 @@
 
 .page-footer__menu-list {
   list-style: none;
-  margin: 29px auto 0;
+  margin: 24px auto 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -259,7 +264,7 @@
 
 .page-footer__address-list {
   list-style: none;
-  margin: 29px auto 0;
+  margin: 24px auto 0;
   padding: 0;
   display: flex;
   flex-direction: column;

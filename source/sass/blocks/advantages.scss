@@ -36,11 +36,13 @@
   cursor: pointer;
   min-height: 232px;
   outline: 1px solid $advantage-border;
-
+  padding: 40px 43px;
+  box-sizing: border-box;
 
   &::before {
     position: absolute;
     content: "";
+    top: 0;
     left: -1px;
     width: 3px;
     height: 100%;
@@ -48,18 +50,22 @@
   }
 
   @media (max-width: $tablet-width) {
+    padding: 23px 22px 20px 25px;
+
     &::before {
       width: 2px;
     }
   }
 
   @media (max-width: $mobile-width) {
+    padding: 23px 14px 26px 25px;
+
     &:first-child .advantages__item-link {
       padding-right: 16px;
     }
 
     &:last-child .advantages__item-link {
-      padding-right: 16px;
+      padding-right: 10px;
     }
   }
 }
@@ -67,8 +73,6 @@
 .advantages__item-link {
   display: block;
   height: 100%;
-  padding: 40px 43px;
-  box-sizing: border-box;
 
   & svg {
     fill: $main-blue;
@@ -106,8 +110,6 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 23px 22px 20px 25px;
-
     & h3 {
       margin-top: 4px;
     }
@@ -118,8 +120,6 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 23px 14px 26px 25px;
-
     & svg {
       width: 35px;
       height: 35px;
