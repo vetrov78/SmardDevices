@@ -219,12 +219,15 @@
 
   & h2 {
     margin: 0;
+    margin-left: 4px;
     text-transform: uppercase;
+    font-weight: 400;
     font-size: 15px;
     line-height: 16px;
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0;
     cursor: pointer;
     padding: 26px 15px;
   }
@@ -241,7 +244,7 @@
 
   @media (max-width: $tablet-width) {
     height: 100%;
-    margin: 0 15px 23px;
+    margin: 23px 0 29px;
   }
 }
 
@@ -274,13 +277,6 @@
       background-color: $footer-decoration;
       opacity: 0.2;
     }
-  }
-
-  & h2 {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 15px;
-    line-height: 16px;
   }
 }
 

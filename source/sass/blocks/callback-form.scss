@@ -1,17 +1,16 @@
 .callback-form {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   width: 100%;
   color: $main-white;
   padding: 95px 0 110px;
   box-sizing: border-box;
-  background: left 350px top 160px no-repeat url("../img/paper_airplane_3d_model@1x.png"),
-    $main-blue left 175px top -60px no-repeat url("../img/form_polygons.svg");
+  background: $main-blue left 175px top -60px no-repeat url("../img/form_polygons.svg");
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background: left 350px top 160px no-repeat url("../img/paper_airplane_3d_model@2x.png"),
-      $main-blue left 175px top -60px no-repeat url("../img/form_polygons.svg");
-    background-size: 511px 288px, 1745px 765px;
+    background-color: $main-blue;
+    background-image: url("../img/form_polygons.svg");
+    background-size: 1745px 765px;
   }
 
   @media (max-width: $tablet-width) {
@@ -21,12 +20,26 @@
 
   @media (max-width: $mobile-width) {
     padding: 33px 0 41px;
+    justify-content: center;
+  }
+}
+
+.callback-form__background-container {
+  flex: 0 1 511px;
+  background: left 0 top 70px / contain no-repeat url("../img/paper_airplane_3d_model@1x.png");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: left 0 top 70px / contain no-repeat url("../img/paper_airplane_3d_model@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
 
 .callback-form form {
-  padding-right: 20%;
-  width: 570px;
+  margin: 0 25px 0 6%;
+  flex: 0 0 570px;
 
   & h1 {
     margin: 0;
@@ -42,7 +55,7 @@
 
   @media (max-width: $tablet-width) {
     padding: 0 11%;
-    width: 590px;
+    flex: 1 0 590px;
 
     & h1 {
       margin-left: -3px;
@@ -57,9 +70,11 @@
 
   @media (max-width: $mobile-width) {
     padding: 0 5%;
+    flex: 1 0 290px;
     width: auto;
 
     & h1 {
+      margin-left: 3px;
       font-size: 28px;
       line-height: 39px;
     }
@@ -135,7 +150,7 @@
     }
 
     & input {
-      flex-basis: 279px;
+      flex: 1 0 279px;
     }
 
     & textarea {
@@ -144,6 +159,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    flex-direction: column;
     max-width: none;
     margin-top: 0;
 
@@ -157,7 +173,7 @@
 
     & input {
       margin-top: 30px;
-      flex-basis: 290px;
+      flex-basis: auto;
 
       &:not(:first-child) {
         margin-left: 0;
@@ -192,7 +208,7 @@
     line-height: 16px;
     letter-spacing: 0.05em;
 
-    &:hover{
+    &:hover {
       color: $about-title;
       border-color: $about-title;
     }
@@ -207,7 +223,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-top: 33px;
 
     & button {
