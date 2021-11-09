@@ -78,53 +78,22 @@
   }
 
   @media (max-width: $mobile-width) {
-    flex-basis: 261px;
+    margin-top: 45px;
+    flex-basis: auto;
     flex-direction: column;
     justify-content: start;
   }
 }
 
-.page-footer__logo-block {
-  display: grid;
-  grid-template-areas: "logo title"
-    "logo text";
-  grid-template-columns: auto 1fr;
-  grid-template-rows: min-content min-content;
+.page-footer__logo-link {
+  z-index: 1;
+  width: 216px;
+  height: 52px;
+  background: url("../img/logo_bottom@1x.png");
 
-  & svg {
-    grid-area: logo;
-    padding-right: 16px;
-  }
-
-  & h2 {
-    grid-area: title;
-    margin: 0;
-    font-family: "RobotoCondensed", "Arial", sans-serif;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-    text-transform: capitalize;
-
-    @media (max-width: $tablet-width) {
-      margin-top: 7px;
-    }
-  }
-
-  & p {
-    grid-area: text;
-    margin: 0;
-    font-family: "Roboto", "Arial", sans-serif;
-    font-size: 12px;
-    line-height: 15px;
-    color: $logo-text;
-  }
-
-  @media (max-width: $tablet-width) {
-    margin-top: -10px;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-top: 46px;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url("../img/logo_bottom@2x.png");
+    background-size: 216px 52px;
   }
 }
 
@@ -196,7 +165,7 @@
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
-    padding-top: 0;
+    padding-top: 55px;
   }
 }
 
@@ -219,14 +188,21 @@
 
   & h2 {
     margin: 0;
+    margin-left: 4px;
     text-transform: uppercase;
+    font-weight: 400;
     font-size: 15px;
     line-height: 16px;
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0;
     cursor: pointer;
     padding: 26px 15px;
+
+    & h2 {
+      margin: 0;
+    }
   }
 }
 
@@ -241,7 +217,7 @@
 
   @media (max-width: $tablet-width) {
     height: 100%;
-    margin: 0 15px 23px;
+    margin: 23px 0 29px;
   }
 }
 
@@ -250,6 +226,10 @@
   opacity: 0.5;
   font-size: 15px;
   line-height: 26px;
+
+  &:hover {
+    color: $logo-text;
+  }
 }
 
 .page-footer__address-block {
@@ -268,19 +248,12 @@
       position: absolute;
       content: "";
       left: 0;
-      top: 0;
+      top: -5px;
       height: 1px;
       width: 100vw;
       background-color: $footer-decoration;
       opacity: 0.2;
     }
-  }
-
-  & h2 {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 15px;
-    line-height: 16px;
   }
 }
 

@@ -10,6 +10,7 @@
   callRequestButton.addEventListener('click', function () {
     if (!windowExistFlag) {
       var callRequestWindow = callFormTemplate.cloneNode(true);
+      document.body.classList.add('body-no-scroll');
       document.body.appendChild(callRequestWindow);
       applyDataMask(callRequestWindow.querySelector('[data-mask]'));
       var closeButton = document.querySelector('.callback-popup__close-button');
@@ -35,6 +36,7 @@
     var removeModal = function (evt) {
       evt.preventDefault();
       callRequestWindow.remove();
+      document.body.classList.remove('body-no-scroll');
       document.removeEventListener('keydown', onEscRemoveModal);
       closeButton.removeEventListener('click', removeModal);
       windowExistFlag = false;
