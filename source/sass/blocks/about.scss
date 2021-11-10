@@ -24,28 +24,6 @@
     padding-bottom: 5px;
   }
 
-  & button {
-    cursor: pointer;
-    width: 180px;
-    height: 45px;
-    margin: 35px 0 0;
-    background-color: transparent;
-    border: 1px solid $main-blue;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-family: "RobotoCondensed", "Arial", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    color: $main-blue;
-
-    &:hover {
-      color: $about-title;
-      border-color: $about-title;
-    }
-  }
-
   @media (max-width: $tablet-width) {
     margin-top: 55px;
     padding-left: 213px;
@@ -66,10 +44,6 @@
       margin-top: 25px;
       padding-bottom: 0;
     }
-
-    & button {
-      margin-top: 40px;
-    }
   }
 
   @media (max-width: $mobile-width) {
@@ -88,9 +62,38 @@
       margin-top: 21px;
       padding-bottom: 20px;
     }
+  }
+}
 
-    & button {
-      margin-top: 13px;
-    }
+.about__detail-button-link {
+  cursor: pointer;
+  margin: 35px 0 0;
+  display: block;
+  width: 180px;
+  padding: 14px 13px 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid $main-blue;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $main-blue;
+
+  &:hover {
+    color: $about-title;
+    border-color: $about-title;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 13px;
   }
 }

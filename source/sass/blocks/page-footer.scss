@@ -124,6 +124,7 @@
 .page-footer__socials-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0;
   margin-top: 55px;
@@ -170,7 +171,7 @@
 }
 
 .page-footer__menu-block {
-  flex: 0 0.7 490px;
+  flex: 0 0.7 610px;
 
   @media (max-width: $tablet-width) {
     flex-grow: 1;
@@ -220,9 +221,17 @@
   height: 50%;
   flex-wrap: wrap;
 
+  & li {
+    width: 50%;
+  }
+
   @media (max-width: $tablet-width) {
     height: 100%;
     margin: 23px 0 29px;
+
+    & li {
+      width: 100%;
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -287,7 +296,7 @@
 .page-footer__bottom-block {
   height: 52px;
   list-style: none;
-  margin: -25px auto 0;
+  margin: -20px auto 0;
   padding: 0;
   max-width: 1412px;
   display: flex;
@@ -296,6 +305,7 @@
 
   @media (max-width: $tablet-width) {
     height: 69px;
+    margin-top: -28px;
     padding: 33px 5px 0;
   }
 
