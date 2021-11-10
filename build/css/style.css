@@ -1588,6 +1588,12 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .no-js .page-footer__address-toggle {
+    display: none;
+  }
+}
+
 .page-footer__menu-toggle {
   display: none;
   cursor: pointer;

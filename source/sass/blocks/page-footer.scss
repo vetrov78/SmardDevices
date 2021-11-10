@@ -376,6 +376,11 @@
   }
 }
 
+.no-js .page-footer__address-toggle {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
 
 .page-footer__menu-toggle {
   display: none;
