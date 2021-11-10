@@ -790,13 +790,16 @@ a {
 
 .goods__list {
   list-style: none;
-  margin: 47px auto 0;
+  margin: 30px auto 0;
   width: fit-content;
   padding: 0;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 @media (max-width: 1023px) {
   .goods__list {
+    margin-top: 47px;
     flex-direction: column;
     width: 100%;
   }
@@ -809,6 +812,7 @@ a {
 
 .goods__item {
   position: relative;
+  margin-top: 17px;
 }
 .goods__item:not(:last-child) {
   margin-right: 30px;
@@ -816,6 +820,7 @@ a {
 @media (max-width: 1023px) {
   .goods__item {
     height: 256px;
+    margin-top: 0;
   }
   .goods__item:not(:last-child) {
     margin-right: 0;
@@ -1328,6 +1333,7 @@ a {
 .page-footer__socials-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0;
   margin-top: 55px;
@@ -1374,7 +1380,7 @@ a {
 }
 
 .page-footer__menu-block {
-  flex: 0 0.7 490px;
+  flex: 0 0.7 610px;
 }
 @media (max-width: 1023px) {
   .page-footer__menu-block {
@@ -1424,10 +1430,16 @@ a {
   height: 50%;
   flex-wrap: wrap;
 }
+.page-footer__menu-list li {
+  width: 50%;
+}
 @media (max-width: 1023px) {
   .page-footer__menu-list {
     height: 100%;
     margin: 23px 0 29px;
+  }
+  .page-footer__menu-list li {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -1495,7 +1507,7 @@ a {
 .page-footer__bottom-block {
   height: 52px;
   list-style: none;
-  margin: -25px auto 0;
+  margin: -20px auto 0;
   padding: 0;
   max-width: 1412px;
   display: flex;
@@ -1505,6 +1517,7 @@ a {
 @media (max-width: 1023px) {
   .page-footer__bottom-block {
     height: 69px;
+    margin-top: -28px;
     padding: 33px 5px 0;
   }
 }

@@ -44,12 +44,15 @@
 
 .goods__list {
   list-style: none;
-  margin: 47px auto 0;
+  margin: 30px auto 0;
   width: fit-content;
   padding: 0;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
+    margin-top: 47px;
     flex-direction: column;
     width: 100%;
   }
@@ -61,6 +64,7 @@
 
 .goods__item {
   position: relative;
+  margin-top: 17px;
 
   &:not(:last-child) {
     margin-right: 30px;
@@ -68,6 +72,7 @@
 
   @media (max-width: $tablet-width) {
     height: 256px;
+    margin-top: 0;
 
     &:not(:last-child) {
       margin-right: 0;
