@@ -118,6 +118,11 @@
     &:not(:first-child) {
       margin-left: 30px;
     }
+
+    & -webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-text-fill-color: #fff !important;
+    }
   }
 
   & textarea {
@@ -139,7 +144,6 @@
       color: $main-white;
     }
   }
-
 
   @media (max-width: $tablet-width) {
     max-width: none;

@@ -39,6 +39,21 @@ a {
   text-decoration: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #00b2ff;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #19baff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -590,6 +605,10 @@ a {
 .callback-form__inputs-container input:not(:first-child) {
   margin-left: 30px;
 }
+.callback-form__inputs-container input -webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
 .callback-form__inputs-container textarea {
   flex-basis: 100%;
   min-height: 154px;
@@ -948,7 +967,6 @@ a {
 
 .page-header__upper-block {
   display: flex;
-  align-items: center;
   margin: 33px auto;
   padding: 0 6px;
   max-width: 1411px;
