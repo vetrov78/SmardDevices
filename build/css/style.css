@@ -50,7 +50,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: 1px solid #00b2ff;
   -webkit-text-fill-color: #ffffff;
-  -webkit-box-shadow: 0 0 0px 1000px #19baff inset;
+  box-shadow: 0 0 0 1000px #19baff inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -607,7 +607,7 @@ select:-webkit-autofill:focus {
 }
 .callback-form__inputs-container input -webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: #fff !important;
+  -webkit-text-fill-color: #ffffff;
 }
 .callback-form__inputs-container textarea {
   flex-basis: 100%;
