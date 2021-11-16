@@ -343,6 +343,13 @@ select:-webkit-autofill:focus {
   box-sizing: border-box;
   background-color: #00b2ff;
 }
+@media screen and (max-height: 741px) {
+  .callback-popup__container {
+    height: auto;
+    bottom: 0;
+    overflow: auto;
+  }
+}
 
 .callback-popup__close-button {
   position: absolute;

@@ -8,6 +8,12 @@
   padding: 26px 40px 35px;
   box-sizing: border-box;
   background-color: $main-blue;
+
+  @media screen and (max-height:741px) {
+    height: auto;
+    bottom: 0;
+    overflow: auto;
+  }
 }
 
 .callback-popup__close-button {
