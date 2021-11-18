@@ -1,5 +1,8 @@
 'use strict';
-(function () {
+import jQuery from './jquery-3.6.0.js';
+
+(function ($) {
+  console.log($('.header'))
   var callFormTemplate = document.querySelector('#callback-popup')
       .content
       .querySelector('.callback-popup__container');
@@ -169,4 +172,4 @@
   headerButton.addEventListener('click', function () {
     window.location.href = '#form';
   });
-})();
+})(jQuery);
