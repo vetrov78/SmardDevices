@@ -1,16 +1,12 @@
 'use strict';
-import jQuery from './jquery-3.6.0.js';
 
 (function ($) {
-  console.log($('.header'))
   var callFormTemplate = document.querySelector('#callback-popup')
       .content
       .querySelector('.callback-popup__container');
-
   // модальное окно "Заказать звонок"
-  var callRequestButton = document.querySelector('#call-request-button');
   var windowExistFlag = false;
-  callRequestButton.addEventListener('click', function () {
+  $('#call-request-button').on('click', function () {
     var nonModalNodes;
     // открытие окна
     if (!windowExistFlag) {
