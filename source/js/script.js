@@ -17,7 +17,7 @@
     $('#popup-name').focus();
 
     // ввод телефона в соответствии с маской
-
+    $('#popup-phone').mask('+7(999)9999999');
 
     // закрытие по клику вне модального окна
     window.addEventListener('click', function (evt) {
@@ -67,6 +67,9 @@
     closeButton.on('click', removeModal);
   });
 
+  // Маска ввода телефона в форме обратной связи
+  $('#phone').mask('+7(999)9999999');
+
   // Реализация аккордеона
   var maBlock = document.querySelector('.page-footer__menu-address-wrapper');
   maBlock.classList.remove('no-js');
@@ -74,7 +77,6 @@
   menuBlock.classList.add('page-footer__menu-block--closed');
   var addressBlock = document.querySelector('.page-footer__address-block');
   addressBlock.classList.add('page-footer__address-block--closed');
-
   var footerMenuHeader = document.querySelector('.page-footer__header--menu');
   footerMenuHeader.addEventListener('click', function () {
     if (menuBlock.classList.contains('page-footer__menu-block--closed')) {
@@ -89,7 +91,6 @@
       menuBlock.classList.remove('page-footer__menu-block--opened');
     }
   });
-
   var footerAddressHeader = document.querySelector('.page-footer__header--address');
   footerAddressHeader.addEventListener('click', function () {
     if (addressBlock.classList.contains('page-footer__address-block--closed')) {
