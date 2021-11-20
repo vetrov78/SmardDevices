@@ -3,76 +3,68 @@
 (function ($) {
   // модальное окно "Заказать звонок"
   // из шаблона
-  var callFormTemplate = document.querySelector('#callback-popup')
-      .content
-      .querySelector('.callback-popup__container');
-  var windowExistFlag = false;
+  var templateFrag = $('#callback-popup').prop('content');
+  var callRequestWindow = $(templateFrag)
+      .find('.callback-popup__container')
+      .clone();
+
+  // обработка нажатия на кнопку
   $('#call-request-button').on('click', function () {
-    // открытие окна
-    if (!windowExistFlag) {
-      var callRequestWindow = callFormTemplate.cloneNode(true);
-      document.body.classList.add('body-no-scroll');
-      document.body.appendChild(callRequestWindow);
-      $('#popup-name').focus();
-      // ввод телефона в соответствии с маской
-      applyDataMask(callRequestWindow.querySelector('[data-mask]'));
-      var closeButton = document.querySelector('.callback-popup__close-button');
-      windowExistFlag = true;
+    // POPUP OPEN
+    $('.page__body').addClass('body-no-scroll');
+    $('.page__body').append(callRequestWindow);
+    var closeButton = $('.callback-popup__close-button');
+    $('#popup-name').focus();
 
-      // закрытие по клику вне модального окна
-      window.addEventListener('click', function (evt) {
-        var isPathContainForm = function (x) {
-          return (typeof x.className === 'string') ? x.className.includes('callback-popup__container') || x.id.includes('call-request-button') : false;
-        };
-        if (!evt.composedPath().some(isPathContainForm)) {
-          removeModal(evt);
-        }
-      });
+    // ввод телефона в соответствии с маской
 
-      // недоступность элементов вне модального окна
-      var modalNodes = $('.callback-popup__container *').find(':focusable');
-      var focusableNodes = $(':focusable');
-      for (var i = 0; i < focusableNodes.length; i++) {
-        var node = focusableNodes[i];
-        if (!modalNodes.is(node)) {
-          node._prevTabindex = node.tabIndex;
-          node.tabIndex = -1;
-          node.style.pointerEvents = 'none';
-          node.style.outline = 'none';
-        }
+
+    // закрытие по клику вне модального окна
+    window.addEventListener('click', function (evt) {
+      var isPathContainForm = function (x) {
+        return (typeof x.className === 'string') ? x.className.includes('callback-popup__container') || x.id.includes('call-request-button') : false;
+      };
+      if (!evt.composedPath().some(isPathContainForm)) {
+        removeModal(evt);
+      }
+    });
+
+    // недоступность элементов вне модального окна
+    var modalNodes = $('.callback-popup__container *').find(':focusable');
+    var focusableNodes = $(':focusable');
+    for (var i = 0; i < focusableNodes.length; i++) {
+      var node = focusableNodes[i];
+      if (!modalNodes.is(node)) {
+        node._prevTabindex = node.tabIndex;
+        node.tabIndex = -1;
+        node.style.pointerEvents = 'none';
+        node.style.outline = 'none';
       }
     }
-    // закрытие окна
-    var isEscEvent = function (evt) {
-      return (evt.key === 'Escape' || evt.key === 'Esc');
-    };
+    // закрытие модалки по нажатию на Esc клавиатуры
     var onEscRemoveModal = function (evt) {
-      if (isEscEvent(evt)) {
+      if (evt.key === 'Escape' || evt.key === 'Esc') {
         removeModal(evt);
       }
     };
     var removeModal = function (evt) {
       evt.preventDefault();
       callRequestWindow.remove();
-      document.body.classList.remove('body-no-scroll');
-      // восстанавливаем tabindex
+      $('.page__body').removeClass('body-no-scroll');
+      // RESTORE TABINDEX & POINTER-EVENTS TO AUTO
       for (i = 0; i < focusableNodes.length; i++) {
         node = focusableNodes[i];
-        if (node._prevTabindex) {
-          node.tabIndex = node._prevTabindex;
-          node._prevTabindex = null;
-        } else {
-          node.removeAttribute('tabindex');
-        }
+        node.tabIndex = node._prevTabindex;
+        node._prevTabindex = null;
         node.style.pointerEvents = 'auto';
         node.style.outline = null;
       }
-      document.removeEventListener('keydown', onEscRemoveModal);
-      closeButton.removeEventListener('click', removeModal);
-      windowExistFlag = false;
+      // REMOVE LISTENERS
+      $(document).off('keydown', onEscRemoveModal);
+      closeButton.off('click', removeModal);
     };
-    document.addEventListener('keydown', onEscRemoveModal);
-    closeButton.addEventListener('click', removeModal);
+    $(document).on('keydown', onEscRemoveModal);
+    closeButton.on('click', removeModal);
   });
 
   // Реализация аккордеона
@@ -112,57 +104,6 @@
       addressBlock.classList.remove('page-footer__address-block--opened');
     }
   });
-
-  // Ввод номера телефона в соотв.с маской
-  Array.prototype.forEach.call(document.querySelectorAll('[data-mask]'), applyDataMask);
-  function applyDataMask(field) {
-    var mask = field.dataset.mask.split('');
-
-    // Принимает строку значения, возвращает массив из цифр, содержащихся в строке
-    function stripMask(maskedData) {
-      function isDigit(char) {
-        return /\d/.test(char);
-      }
-      return maskedData.split('').filter(isDigit);
-    }
-
-    // Replace `_` characters with characters from `data`
-    function applyMask(data) {
-      var flag = (data.length < 3);
-      return mask.map(function (char) {
-        if (flag) {
-          if (char !== '_' && char !== ')') {
-            return char;
-          }
-        } else {
-          if (char !== '_') {
-            return char;
-          }
-        }
-        if (data.length === 0) {
-          return '';
-        }
-        return data.shift();
-      }).join('');
-    }
-
-    function reapplyMask(data) {
-      return applyMask(stripMask(data));
-    }
-
-    function changed() {
-      var oldStart = field.selectionStart;
-      var oldEnd = field.selectionEnd;
-
-      field.value = reapplyMask(field.value.replace(/7/, ''));
-
-      field.selectionStart = oldStart;
-      field.selectionEnd = oldEnd;
-    }
-
-    field.addEventListener('click', changed);
-    field.addEventListener('keyup', changed);
-  }
 
   // скролл при нажатии "Получить бесплатную консультацию"
   var headerButton = document.querySelector('.page-header__promo-button');
