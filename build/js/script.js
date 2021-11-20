@@ -1,40 +1,42 @@
 'use strict';
 
 (function ($) {
+  // модальное окно "Заказать звонок"
+  // из шаблона
   var callFormTemplate = document.querySelector('#callback-popup')
       .content
       .querySelector('.callback-popup__container');
-  // модальное окно "Заказать звонок"
   var windowExistFlag = false;
   $('#call-request-button').on('click', function () {
-    var nonModalNodes;
     // открытие окна
     if (!windowExistFlag) {
       var callRequestWindow = callFormTemplate.cloneNode(true);
       document.body.classList.add('body-no-scroll');
       document.body.appendChild(callRequestWindow);
-      callRequestWindow.querySelector('#popup-name').focus();
+      $('#popup-name').focus();
       // ввод телефона в соответствии с маской
       applyDataMask(callRequestWindow.querySelector('[data-mask]'));
       var closeButton = document.querySelector('.callback-popup__close-button');
       windowExistFlag = true;
+
       // закрытие по клику вне модального окна
       window.addEventListener('click', function (evt) {
         var isPathContainForm = function (x) {
           return (typeof x.className === 'string') ? x.className.includes('callback-popup__container') || x.id.includes('call-request-button') : false;
         };
-        if (!evt.path.some(isPathContainForm)) {
+        if (!evt.composedPath().some(isPathContainForm)) {
           removeModal(evt);
         }
       });
+
       // недоступность элементов вне модального окна
-      var modalNodes = Array.from(document.querySelectorAll('.callback-popup__container *'));
-      nonModalNodes = document.querySelectorAll('body *:not([tabindex="-1"]');
-      for (var i = 0; i < nonModalNodes.length; i++) {
-        var node = nonModalNodes[i];
-        if (!modalNodes.includes(node) && node !== callRequestWindow) {
-          node._prevTabindex = node.getAttribute('tabindex');
-          node.setAttribute('tabindex', -1);
+      var modalNodes = $('.callback-popup__container *').find(':focusable');
+      var focusableNodes = $(':focusable');
+      for (var i = 0; i < focusableNodes.length; i++) {
+        var node = focusableNodes[i];
+        if (!modalNodes.is(node)) {
+          node._prevTabindex = node.tabIndex;
+          node.tabIndex = -1;
           node.style.pointerEvents = 'none';
           node.style.outline = 'none';
         }
@@ -54,10 +56,10 @@
       callRequestWindow.remove();
       document.body.classList.remove('body-no-scroll');
       // восстанавливаем tabindex
-      for (i = 0; i < nonModalNodes.length; i++) {
-        node = nonModalNodes[i];
+      for (i = 0; i < focusableNodes.length; i++) {
+        node = focusableNodes[i];
         if (node._prevTabindex) {
-          node.setAttribute('tabindex', node._prevTabindex);
+          node.tabIndex = node._prevTabindex;
           node._prevTabindex = null;
         } else {
           node.removeAttribute('tabindex');
